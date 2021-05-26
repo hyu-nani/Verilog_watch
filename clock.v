@@ -17,26 +17,26 @@ module	clock (
 	
 	clkone_gen		U0 ( 
 							  .clk		(clk),
-							  .rst		(rstn),
+							  .rst		(rst),
 							  .clk1		(clk1) );
 	
 	second			U1 ( 
 							  .clk		(clk1),
-							  .rst		(rstn),
+							  .rst		(rst),
 							  .w_m		(w_m),
 							  .sec_10	(sec_10),
 							  .sec1		(sec1) );
 	
 	minute			U2 ( 
 							  .w_m		(w_m),	
-							  .rst		(rstn),
+							  .rst		(rst),
 							  .w_h		(w_h),
 							  .min_10	(min_10),
 							  .min1		(min1) );
 							  
 	hour				U3 ( 
 							  .w_h		(w_h),	
-							  .rst		(rstn),
+							  .rst		(rst),
 							  .hour_10	(hour_10),
 							  .hour1		(hour1) );
 
