@@ -1,12 +1,12 @@
 module	clock ( 
-						clk,
-						rst,
-						hour_10,
-						hour1,
-						min_10,
-						min1,
-						sec_10,
-						sec1);
+					clk,
+					rst,
+					hour_10,
+					hour1,
+					min_10,
+					min1,
+					sec_10,
+					sec1);
 						
 	input				clk, rst;
 	output			[3:0] hour_10, hour1, min_10, min1, sec_10, sec1;
