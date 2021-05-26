@@ -34,7 +34,6 @@ module	digital_project ( clk, rst, lcd_rs, lcd_rw, lcd_e, lcd_data );
 			.hour_10	(hour_10),
 			.hour1	(hour1),
 			.out		(data_char) );
-			
 	
 	lcd_driver	DRV ( 
 			.clk			(clk), 
