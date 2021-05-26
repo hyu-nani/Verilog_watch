@@ -1,34 +1,57 @@
-module second(clk, rst, w_m, sec_10, sec1);
+module time_cal(
+	clk, 
+	rst,
+	year,
+	month,
+	day,
+	second,
+	minute,
+	hour);
+	
 	input 	clk, rst;
-	output 	[3:0] sec_10, sec1;
-	output	w_m;
 	
-	reg		[3:0] sec_10, sec1;
-	reg		w_m;
+	output	[11:0]year;
+	output	[3:0]	month;
+	output	[4:0]	day;
+	output 	[5:0] second,minute,hour;
 		
-	always @(posedge clk or negedge rst)
+	always @(posedge clk or negedge rst) begin
 		if(!rst) begin
-			sec1 		<= 4'b0;
-			sec_10	<= 4'd0;
-			w_m		<= 0;
+			second	<= 6'd0;
+			minute	<=	6'd0;
+			hour		<=	6'd0;
 		end
-		
-		else if(sec1 == 4'd9) begin 
-			sec1 		<= 4'd0;
-			sec_10	<= sec_10 + 4'd1;
-			w_m		<= 1;
+		if(second == 6'd59) begin 
+			second 	<= 6'd0;
+			minute	<=	minute + 6'd1;
 		end
-		
-		else if(sec_10 == 5 && sec1 == 9) begin
-			sec1		<= 4'd0;
-			sec_10	<= 4'd0;
-			w_m		<= 0;
+		if(minute == 6'd59) begin 
+			minute	<= 6'd0;
+			hour		<=	hour + 6'd1;
 		end
-		
-		else begin
-			sec1 		<= sec1 + 4'd1;
-			sec_10	<= sec_10;
-			w_m		<= 0;
+		if(hour	==	6'd23) begin
+			second	<= 6'd0;
+			minute	<=	6'd0;
+			hour		<=	6'd0;
+			day		<=	day + 5'd1;
 		end
+		second	<= second + 6'd1;
+	end
 	
+	always @(posedge clk or negedge rst) begin
+		if(!rst)	begin
+			year	<=	12'd2021;
+			month	<=	4'd1;
+			day	<=	5'd1;
+		end
+		if(day	==	5'd30) begin
+			month	<=	month	+ 4'd1;
+			day	<=	5'd1;
+		end
+		if(month	==	4'd12) begin
+			year	<=	year + 12'd1;
+			month	<=	4'd1;
+			day	<=	5'd1;
+		end
+	end
 endmodule

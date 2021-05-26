@@ -1,22 +1,27 @@
 module	digital_project ( clk, rst, lcd_rs, lcd_rw, lcd_e, lcd_data );
 
-	input	clk;
-	input	rst;
-	output	lcd_rs;
-	output	lcd_rw;
-	output	lcd_e;
+	input				clk;
+	input				rst;
+	output			lcd_rs;
+	output			lcd_rw;
+	output			lcd_e;
 	output	[7:0] lcd_data;
 	
-	wire	[4:0] index_char;
-	wire	[7:0] data_char;
-	wire		en_clk;
+	wire		[4:0] index_char;
+	wire		[7:0] data_char;
+	wire				en_clk;
 	
-	assign	rstn	= ~rst;
+	assign			rstn	= ~rst;
 	
 	clock			TIME(
-			.clk		(clk),
-			.rst		(rstn),
-			.q			(q) );
+		.clk		(clk), 
+		.rst		(rst),
+		.year		(year),
+		.month	(month),
+		.day		(day),
+		.second	(second),
+		.minute	(minute),
+		.hour		(hour));
 	
 	en_clk_lcd	LCLK( 
 			.clk(clk), 
