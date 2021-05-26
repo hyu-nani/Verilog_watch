@@ -1,0 +1,26 @@
+|minute
+clk => ~NO_FANOUT~
+rst => min_10.OUTPUTSELECT
+rst => min_10.OUTPUTSELECT
+rst => min_10.OUTPUTSELECT
+rst => min_10.OUTPUTSELECT
+rst => w_h.OUTPUTSELECT
+rst => min1.OUTPUTSELECT
+rst => min1.OUTPUTSELECT
+rst => min1.OUTPUTSELECT
+rst => min1.OUTPUTSELECT
+w_m => min1[0]~reg0.CLK
+w_m => min1[1]~reg0.CLK
+w_m => min1[2]~reg0.CLK
+w_m => min1[3]~reg0.CLK
+w_h <= w_h.DB_MAX_OUTPUT_PORT_TYPE
+min_10[0] <= min_10.DB_MAX_OUTPUT_PORT_TYPE
+min_10[1] <= min_10.DB_MAX_OUTPUT_PORT_TYPE
+min_10[2] <= min_10[2].DB_MAX_OUTPUT_PORT_TYPE
+min_10[3] <= min_10.DB_MAX_OUTPUT_PORT_TYPE
+min1[0] <= min1[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+min1[1] <= min1[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+min1[2] <= min1[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+min1[3] <= min1[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

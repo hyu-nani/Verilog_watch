@@ -1,0 +1,49 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "sec_10[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sec_10[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sec_10[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sec_10[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sec1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sec1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sec1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sec1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

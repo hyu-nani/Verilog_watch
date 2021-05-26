@@ -1,0 +1,25 @@
+|second
+clk => sec1[0]~reg0.CLK
+clk => sec1[1]~reg0.CLK
+clk => sec1[2]~reg0.CLK
+clk => sec1[3]~reg0.CLK
+rst => sec_10.OUTPUTSELECT
+rst => sec_10.OUTPUTSELECT
+rst => sec_10.OUTPUTSELECT
+rst => sec_10.OUTPUTSELECT
+rst => w_m.OUTPUTSELECT
+rst => sec1[0]~reg0.ACLR
+rst => sec1[1]~reg0.ACLR
+rst => sec1[2]~reg0.ACLR
+rst => sec1[3]~reg0.ACLR
+w_m <= w_m.DB_MAX_OUTPUT_PORT_TYPE
+sec_10[0] <= sec_10.DB_MAX_OUTPUT_PORT_TYPE
+sec_10[1] <= sec_10.DB_MAX_OUTPUT_PORT_TYPE
+sec_10[2] <= sec_10[2].DB_MAX_OUTPUT_PORT_TYPE
+sec_10[3] <= sec_10.DB_MAX_OUTPUT_PORT_TYPE
+sec1[0] <= sec1[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sec1[1] <= sec1[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sec1[2] <= sec1[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+sec1[3] <= sec1[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

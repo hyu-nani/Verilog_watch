@@ -1,0 +1,41 @@
+module minute	( clk,
+					  rst,
+					  w_m,
+					  w_h,
+					  min_10,
+					  min1 );
+					  
+	input			clk, rst;
+	input			w_m;
+	
+	output		w_h;
+	output		[3:0] min_10, min1;
+	
+	reg			[3:0] min_10, min1;
+	reg			w_h;
+	
+	always @ ( posedge w_m ) begin
+		if(!rst) 
+			min1 <= 4'd0;
+		
+		else if (min1 == 4'd9)
+			min1 <= 4'd0;
+		
+		else
+			min1 <= min1 + 4'd1;
+	end
+	
+	always @ ( min1 == 4'd9 ) begin
+		if(!rst) 
+			min1 <= 4'd0;
+			w_h  <= 0;
+		
+		else if (min1 == 4'd5)
+			min1 <= 4'd0;
+			w_h  <= 1;
+		
+		else
+			min1 <= min1 + 4'd1;
+			w_h  <= 0;
+	end
+		

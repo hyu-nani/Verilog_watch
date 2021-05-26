@@ -1,0 +1,77 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -4.199
+TNS   : -57.048
+
+Type  : Slow 1200mV 85C Model Setup 'clkone_gen:U0|clk1'
+Slack : -0.908
+TNS   : -4.746
+
+Type  : Slow 1200mV 85C Model Hold 'clkone_gen:U0|clk1'
+Slack : 0.452
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.744
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -41.662
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clkone_gen:U0|clk1'
+Slack : -1.487
+TNS   : -11.896
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -3.923
+TNS   : -49.328
+
+Type  : Slow 1200mV 0C Model Setup 'clkone_gen:U0|clk1'
+Slack : -0.723
+TNS   : -3.627
+
+Type  : Slow 1200mV 0C Model Hold 'clkone_gen:U0|clk1'
+Slack : 0.401
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.692
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -41.662
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clkone_gen:U0|clk1'
+Slack : -1.487
+TNS   : -11.896
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -1.304
+TNS   : -11.120
+
+Type  : Fast 1200mV 0C Model Setup 'clkone_gen:U0|clk1'
+Slack : 0.171
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clkone_gen:U0|clk1'
+Slack : 0.186
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.298
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -30.690
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clkone_gen:U0|clk1'
+Slack : -1.000
+TNS   : -8.000
+
+------------------------------------------------------------

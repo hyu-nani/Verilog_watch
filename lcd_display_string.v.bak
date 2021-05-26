@@ -1,0 +1,54 @@
+module	lcd_display_string( clk, rst, index, out );
+	
+	input	clk;
+	input	rst;
+	input	[4:0] index;
+	output	[7:0] out;
+	
+	wire	[4:0] index;
+	reg	[7:0] out;
+	
+	always @ ( posedge clk or negedge rst )
+		if (!rst)
+			out	<=	8'h00;
+		else
+			case (index)
+				00	:	out	<=	8'h57;
+				01	:	out	<=	8'h65;
+				02	:	out	<=	8'h6C;
+				03	:	out	<=	8'h63;
+				04	:	out	<=	8'h6F;
+				05	:	out	<=	8'h6D;
+				06	:	out	<=	8'h65;
+				07	:	out	<=	8'h20;
+				08	:	out	<=	8'h74;
+				09	:	out	<=	8'h6F;
+				10	:	out	<=	8'h20;
+				11	:	out	<=	8'h20;
+				12	:	out	<=	8'h20;
+				13	:	out	<=	8'h20;
+				14	:	out	<=	8'h20;
+				15	:	out	<=	8'h20;
+				
+				16	:	out	<=	8'h56;
+				17	:	out	<=	8'h65;
+				18	:	out	<=	8'h72;
+				19	:	out	<=	8'h69;
+				20	:	out	<=	8'h6C;
+				21	:	out	<=	8'h6F;
+				22	:	out	<=	8'h67;
+				23	:	out	<=	8'h20;
+				24	:	out	<=	8'h57;
+				25	:	out	<=	8'h6F;
+				26	:	out	<=	8'h72;
+				27	:	out	<=	8'h6C;
+				28	:	out	<=	8'h64;
+				29	:	out	<=	8'h21;
+				30	:	out	<=	8'h20;
+				31	:	out	<=	8'h20;
+				default : out <= 8'h00;
+			endcase
+endmodule
+				
+				
+				
