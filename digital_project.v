@@ -1,4 +1,10 @@
-module	digital_project ( clk, rst, lcd_rs, lcd_rw, lcd_e, lcd_data );
+module	digital_project ( 
+	clk, 
+	rst, 
+	lcd_rs, 
+	lcd_rw, 
+	lcd_e, 
+	lcd_data );
 
 	input				clk;
 	input				rst;
@@ -13,7 +19,7 @@ module	digital_project ( clk, rst, lcd_rs, lcd_rw, lcd_e, lcd_data );
 	
 	assign			rstn	= ~rst;
 	
-	clock			TIME(
+	clock						TIME(
 		.clk		(clk), 
 		.rst		(rst),
 		.year		(year),
@@ -23,7 +29,25 @@ module	digital_project ( clk, rst, lcd_rs, lcd_rw, lcd_e, lcd_data );
 		.minute	(minute),
 		.hour		(hour));
 	
-	en_clk_lcd	LCLK( 
+	BCD						CON0(
+		.bin		(second),
+		.hundreds(),
+		.tens		(sec_10),
+		.ones		(sec1));
+		
+	BCD						CON1(
+		.bin		(minute),
+		.hundreds(),
+		.tens		(min_10),
+		.ones		(min1));
+		
+	BCD						CON2(
+		.bin		(hour),
+		.hundreds(),
+		.tens		(hour_10),
+		.ones		(hour1));
+		
+	en_clk_lcd				LCLK( 
 			.clk(clk), 
 			.rst(rstn), 
 			.en_clk(en_clk) );
@@ -40,7 +64,7 @@ module	digital_project ( clk, rst, lcd_rs, lcd_rw, lcd_e, lcd_data );
 			.hour1	(hour1),
 			.out		(data_char) );
 	
-	lcd_driver	DRV ( 
+	lcd_driver				DRV ( 
 			.clk			(clk), 
 			.rst			(rstn), 
 			.en_clk		(en_clk), 

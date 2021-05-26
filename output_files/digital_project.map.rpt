@@ -1,5 +1,5 @@
 Analysis & Synthesis report for digital_project
-Wed May 26 18:11:51 2021
+Wed May 26 21:37:00 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Wed May 26 18:11:51 2021           ;
+; Analysis & Synthesis Status        ; Failed - Wed May 26 21:37:00 2021           ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; digital_project                             ;
 ; Top-level Entity Name              ; digital_project                             ;
@@ -161,30 +161,30 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed May 26 18:11:40 2021
+    Info: Processing started: Wed May 26 21:36:49 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off digital_project -c digital_project
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file digital_project.v
     Info (12023): Found entity 1: digital_project File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(14): created implicit net for "rstn" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 14
-Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(19): created implicit net for "year" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 19
-Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(20): created implicit net for "month" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 20
-Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(21): created implicit net for "day" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 21
-Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(22): created implicit net for "second" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 22
-Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(23): created implicit net for "minute" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 23
-Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(24): created implicit net for "hour" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 24
+Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(20): created implicit net for "rstn" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 20
+Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(25): created implicit net for "year" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 25
+Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(26): created implicit net for "month" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 26
+Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(27): created implicit net for "day" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 27
+Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(28): created implicit net for "second" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 28
+Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(29): created implicit net for "minute" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 29
+Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(30): created implicit net for "hour" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 30
 Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(35): created implicit net for "sec_10" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 35
 Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(36): created implicit net for "sec1" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 36
-Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(37): created implicit net for "min_10" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 37
-Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(38): created implicit net for "min1" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 38
-Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(39): created implicit net for "hour_10" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 39
-Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(40): created implicit net for "hour1" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 40
+Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(41): created implicit net for "min_10" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 41
+Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(42): created implicit net for "min1" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 42
+Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(47): created implicit net for "hour_10" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 47
+Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(48): created implicit net for "hour1" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 48
 Info (12127): Elaborating entity "digital_project" for the top level hierarchy
 Warning (12125): Using design file clock.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: clock File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 1
 Warning (10236): Verilog HDL Implicit Net warning at clock.v(26): created implicit net for "clk1" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 26
-Info (12128): Elaborating entity "clock" for hierarchy "clock:TIME" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 24
+Info (12128): Elaborating entity "clock" for hierarchy "clock:TIME" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 30
 Error (10200): Verilog HDL Conditional Statement error at clock.v(37): cannot match operand(s) in the condition to the corresponding edges in the enclosing event control of the always construct File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 37
 Error (10200): Verilog HDL Conditional Statement error at clock.v(41): cannot match operand(s) in the condition to the corresponding edges in the enclosing event control of the always construct File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 41
 Error (10200): Verilog HDL Conditional Statement error at clock.v(46): cannot match operand(s) in the condition to the corresponding edges in the enclosing event control of the always construct File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 46
@@ -229,11 +229,11 @@ Info (10041): Inferred latch for "year[8]" at clock.v(28) File: C:/Users/cube_/O
 Info (10041): Inferred latch for "year[9]" at clock.v(28) File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 28
 Info (10041): Inferred latch for "year[10]" at clock.v(28) File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 28
 Info (10041): Inferred latch for "year[11]" at clock.v(28) File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 28
-Error (12152): Can't elaborate user hierarchy "clock:TIME" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 24
+Error (12152): Can't elaborate user hierarchy "clock:TIME" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 30
 Error: Quartus Prime Analysis & Synthesis was unsuccessful. 6 errors, 22 warnings
     Error: Peak virtual memory: 4704 megabytes
-    Error: Processing ended: Wed May 26 18:11:51 2021
+    Error: Processing ended: Wed May 26 21:37:00 2021
     Error: Elapsed time: 00:00:11
-    Error: Total CPU time (on all processors): 00:00:25
+    Error: Total CPU time (on all processors): 00:00:23
 
 
