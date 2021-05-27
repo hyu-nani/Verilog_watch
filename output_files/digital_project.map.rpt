@@ -1,5 +1,5 @@
 Analysis & Synthesis report for digital_project
-Thu May 27 21:50:06 2021
+Thu May 27 23:02:48 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -22,14 +22,12 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  14. Port Connectivity Checks: "BCD:CON2"
  15. Port Connectivity Checks: "BCD:CON1"
  16. Port Connectivity Checks: "BCD:CON0"
- 17. Port Connectivity Checks: "hour:HOUR"
- 18. Port Connectivity Checks: "minute:MIN"
- 19. Port Connectivity Checks: "second:SEC"
- 20. Port Connectivity Checks: "clock:TIME"
- 21. Post-Synthesis Netlist Statistics for Top Partition
- 22. Elapsed Time Per Partition
- 23. Analysis & Synthesis Messages
- 24. Analysis & Synthesis Suppressed Messages
+ 17. Port Connectivity Checks: "clock:TIME"
+ 18. Port Connectivity Checks: "clkone_gen:U0"
+ 19. Post-Synthesis Netlist Statistics for Top Partition
+ 20. Elapsed Time Per Partition
+ 21. Analysis & Synthesis Messages
+ 22. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -55,7 +53,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu May 27 21:50:06 2021       ;
+; Analysis & Synthesis Status        ; Successful - Thu May 27 23:02:48 2021       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; digital_project                             ;
 ; Top-level Entity Name              ; digital_project                             ;
@@ -171,26 +169,24 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                      ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                  ; Library ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------+---------+
-; digital_project.v                ; yes             ; User Verilog HDL File        ; C:/intelFPGA_lite/Quartus_Projects/watch/digital_project.v    ;         ;
-; clkone_gen.v                     ; yes             ; Auto-Found Verilog HDL File  ; C:/intelFPGA_lite/Quartus_Projects/watch/clkone_gen.v         ;         ;
-; clock.v                          ; yes             ; Auto-Found Verilog HDL File  ; C:/intelFPGA_lite/Quartus_Projects/watch/clock.v              ;         ;
-; second.v                         ; yes             ; Auto-Found Verilog HDL File  ; C:/intelFPGA_lite/Quartus_Projects/watch/second.v             ;         ;
-; minute.v                         ; yes             ; Auto-Found Verilog HDL File  ; C:/intelFPGA_lite/Quartus_Projects/watch/minute.v             ;         ;
-; hour.v                           ; yes             ; Auto-Found Verilog HDL File  ; C:/intelFPGA_lite/Quartus_Projects/watch/hour.v               ;         ;
-; bcd.v                            ; yes             ; Auto-Found Verilog HDL File  ; C:/intelFPGA_lite/Quartus_Projects/watch/bcd.v                ;         ;
-; en_clk_lcd.v                     ; yes             ; Auto-Found Verilog HDL File  ; C:/intelFPGA_lite/Quartus_Projects/watch/en_clk_lcd.v         ;         ;
-; lcd_display_string.v             ; yes             ; Auto-Found Verilog HDL File  ; C:/intelFPGA_lite/Quartus_Projects/watch/lcd_display_string.v ;         ;
-; lcd_driver.v                     ; yes             ; Auto-Found Verilog HDL File  ; C:/intelFPGA_lite/Quartus_Projects/watch/lcd_driver.v         ;         ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                          ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                      ; Library ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------+---------+
+; digital_project.v                ; yes             ; User Verilog HDL File        ; C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v    ;         ;
+; clkone_gen.v                     ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/cube_/OneDrive/Github/Verilog_watch/clkone_gen.v         ;         ;
+; clock.v                          ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v              ;         ;
+; bcd.v                            ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/cube_/OneDrive/Github/Verilog_watch/bcd.v                ;         ;
+; en_clk_lcd.v                     ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/cube_/OneDrive/Github/Verilog_watch/en_clk_lcd.v         ;         ;
+; lcd_display_string.v             ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/cube_/OneDrive/Github/Verilog_watch/lcd_display_string.v ;         ;
+; lcd_driver.v                     ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/cube_/OneDrive/Github/Verilog_watch/lcd_driver.v         ;         ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -336,88 +332,40 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "BCD:CON2"                                                                                                                                           ;
-+----------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                                                                                         ;
-+----------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; bin      ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "bin[7..1]" will be connected to GND.     ;
-; sec1     ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "sec1[3..1]" will be connected to GND.    ;
-; sec_10   ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "sec_10[3..1]" will be connected to GND.  ;
-; min1     ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "min1[3..1]" will be connected to GND.    ;
-; min_10   ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "min_10[3..1]" will be connected to GND.  ;
-; hour_10  ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "hour_10[3..1]" will be connected to GND. ;
-; hour1    ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "hour1[3..1]" will be connected to GND.   ;
-; hundreds ; Output ; Info     ; Explicitly unconnected                                                                                                                          ;
-; tens     ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "tens[3..1]" have no fanouts                         ;
-; ones     ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "ones[3..1]" have no fanouts                         ;
-+----------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "BCD:CON2"                                                                                                                                       ;
++----------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                                                     ;
++----------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; bin      ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "bin[7..1]" will be connected to GND. ;
+; hundreds ; Output ; Info     ; Explicitly unconnected                                                                                                                      ;
+; tens     ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "tens[3..1]" have no fanouts                     ;
+; ones     ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "ones[3..1]" have no fanouts                     ;
++----------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "BCD:CON1"                                                                                                                                           ;
-+----------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                                                                                         ;
-+----------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; bin      ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "bin[7..1]" will be connected to GND.     ;
-; sec1     ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "sec1[3..1]" will be connected to GND.    ;
-; sec_10   ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "sec_10[3..1]" will be connected to GND.  ;
-; min1     ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "min1[3..1]" will be connected to GND.    ;
-; min_10   ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "min_10[3..1]" will be connected to GND.  ;
-; hour_10  ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "hour_10[3..1]" will be connected to GND. ;
-; hour1    ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "hour1[3..1]" will be connected to GND.   ;
-; hundreds ; Output ; Info     ; Explicitly unconnected                                                                                                                          ;
-; tens     ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "tens[3..1]" have no fanouts                         ;
-; ones     ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "ones[3..1]" have no fanouts                         ;
-+----------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "BCD:CON1"                                                                                                                                       ;
++----------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                                                     ;
++----------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; bin      ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "bin[7..1]" will be connected to GND. ;
+; hundreds ; Output ; Info     ; Explicitly unconnected                                                                                                                      ;
+; tens     ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "tens[3..1]" have no fanouts                     ;
+; ones     ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "ones[3..1]" have no fanouts                     ;
++----------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "BCD:CON0"                                                                                                                                           ;
-+----------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                                                                                         ;
-+----------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; bin      ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "bin[7..1]" will be connected to GND.     ;
-; sec1     ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "sec1[3..1]" will be connected to GND.    ;
-; sec_10   ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "sec_10[3..1]" will be connected to GND.  ;
-; min1     ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "min1[3..1]" will be connected to GND.    ;
-; min_10   ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "min_10[3..1]" will be connected to GND.  ;
-; hour_10  ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "hour_10[3..1]" will be connected to GND. ;
-; hour1    ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "hour1[3..1]" will be connected to GND.   ;
-; hundreds ; Output ; Info     ; Explicitly unconnected                                                                                                                          ;
-; tens     ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "tens[3..1]" have no fanouts                         ;
-; ones     ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "ones[3..1]" have no fanouts                         ;
-+----------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "hour:HOUR"                                                                                                                    ;
-+---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                                                                    ;
-+---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
-; hour_10 ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "hour_10[3..1]" have no fanouts ;
-; hour1   ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "hour1[3..1]" have no fanouts   ;
-+---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "minute:MIN"                                                                                                                 ;
-+--------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                                                                   ;
-+--------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
-; min_10 ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "min_10[3..1]" have no fanouts ;
-; min1   ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "min1[3..1]" have no fanouts   ;
-+--------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "second:SEC"                                                                                                                 ;
-+--------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                                                                   ;
-+--------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
-; sec_10 ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "sec_10[3..1]" have no fanouts ;
-; sec1   ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "sec1[3..1]" have no fanouts   ;
-+--------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "BCD:CON0"                                                                                                                                       ;
++----------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                                                     ;
++----------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; bin      ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "bin[7..1]" will be connected to GND. ;
+; hundreds ; Output ; Info     ; Explicitly unconnected                                                                                                                      ;
+; tens     ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "tens[3..1]" have no fanouts                     ;
+; ones     ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "ones[3..1]" have no fanouts                     ;
++----------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -435,6 +383,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; minute ; Output ; Warning  ; Output or bidir port (6 bits) is wider than the port expression (1 bits) it drives; bit(s) "minute[5..1]" have no fanouts ;
 ; hour   ; Output ; Warning  ; Output or bidir port (6 bits) is wider than the port expression (1 bits) it drives; bit(s) "hour[5..1]" have no fanouts   ;
 +--------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "clkone_gen:U0"                                                                      ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; clk1 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -480,86 +437,71 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu May 27 21:49:56 2021
+    Info: Processing started: Thu May 27 23:02:36 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off digital_project -c digital_project
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file digital_project.v
-    Info (12023): Found entity 1: digital_project File: C:/intelFPGA_lite/Quartus_Projects/watch/digital_project.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(20): created implicit net for "rstn" File: C:/intelFPGA_lite/Quartus_Projects/watch/digital_project.v Line: 20
-Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(25): created implicit net for "clk1" File: C:/intelFPGA_lite/Quartus_Projects/watch/digital_project.v Line: 25
-Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(30): created implicit net for "year" File: C:/intelFPGA_lite/Quartus_Projects/watch/digital_project.v Line: 30
-Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(31): created implicit net for "month" File: C:/intelFPGA_lite/Quartus_Projects/watch/digital_project.v Line: 31
-Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(32): created implicit net for "day" File: C:/intelFPGA_lite/Quartus_Projects/watch/digital_project.v Line: 32
-Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(33): created implicit net for "second" File: C:/intelFPGA_lite/Quartus_Projects/watch/digital_project.v Line: 33
-Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(34): created implicit net for "minute" File: C:/intelFPGA_lite/Quartus_Projects/watch/digital_project.v Line: 34
-Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(35): created implicit net for "hour" File: C:/intelFPGA_lite/Quartus_Projects/watch/digital_project.v Line: 35
-Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(40): created implicit net for "sec_10" File: C:/intelFPGA_lite/Quartus_Projects/watch/digital_project.v Line: 40
-Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(41): created implicit net for "sec1" File: C:/intelFPGA_lite/Quartus_Projects/watch/digital_project.v Line: 41
-Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(46): created implicit net for "min_10" File: C:/intelFPGA_lite/Quartus_Projects/watch/digital_project.v Line: 46
-Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(47): created implicit net for "min1" File: C:/intelFPGA_lite/Quartus_Projects/watch/digital_project.v Line: 47
-Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(52): created implicit net for "hour_10" File: C:/intelFPGA_lite/Quartus_Projects/watch/digital_project.v Line: 52
-Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(53): created implicit net for "hour1" File: C:/intelFPGA_lite/Quartus_Projects/watch/digital_project.v Line: 53
-Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(65): created implicit net for "tens1" File: C:/intelFPGA_lite/Quartus_Projects/watch/digital_project.v Line: 65
-Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(66): created implicit net for "ones1" File: C:/intelFPGA_lite/Quartus_Projects/watch/digital_project.v Line: 66
-Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(77): created implicit net for "tens2" File: C:/intelFPGA_lite/Quartus_Projects/watch/digital_project.v Line: 77
-Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(78): created implicit net for "ones2" File: C:/intelFPGA_lite/Quartus_Projects/watch/digital_project.v Line: 78
-Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(89): created implicit net for "tens3" File: C:/intelFPGA_lite/Quartus_Projects/watch/digital_project.v Line: 89
-Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(90): created implicit net for "ones3" File: C:/intelFPGA_lite/Quartus_Projects/watch/digital_project.v Line: 90
+    Info (12023): Found entity 1: digital_project File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(20): created implicit net for "rstn" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 20
+Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(25): created implicit net for "clk1" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 25
+Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(30): created implicit net for "year" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 30
+Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(31): created implicit net for "month" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 31
+Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(32): created implicit net for "day" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 32
+Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(33): created implicit net for "second" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 33
+Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(34): created implicit net for "minute" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 34
+Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(35): created implicit net for "hour" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 35
+Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(40): created implicit net for "tensS" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 40
+Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(41): created implicit net for "onesS" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 41
+Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(46): created implicit net for "tensM" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 46
+Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(47): created implicit net for "onesM" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 47
+Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(52): created implicit net for "tensH" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 52
+Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(53): created implicit net for "onesH" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 53
 Info (12127): Elaborating entity "digital_project" for the top level hierarchy
 Warning (12125): Using design file clkone_gen.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: clkone_gen File: C:/intelFPGA_lite/Quartus_Projects/watch/clkone_gen.v Line: 1
-Info (12128): Elaborating entity "clkone_gen" for hierarchy "clkone_gen:U0" File: C:/intelFPGA_lite/Quartus_Projects/watch/digital_project.v Line: 25
+    Info (12023): Found entity 1: clkone_gen File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clkone_gen.v Line: 1
+Info (12128): Elaborating entity "clkone_gen" for hierarchy "clkone_gen:U0" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 25
 Warning (12125): Using design file clock.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: clock File: C:/intelFPGA_lite/Quartus_Projects/watch/clock.v Line: 1
-Info (12128): Elaborating entity "clock" for hierarchy "clock:TIME" File: C:/intelFPGA_lite/Quartus_Projects/watch/digital_project.v Line: 35
-Warning (12125): Using design file second.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: second File: C:/intelFPGA_lite/Quartus_Projects/watch/second.v Line: 1
-Info (12128): Elaborating entity "second" for hierarchy "second:SEC" File: C:/intelFPGA_lite/Quartus_Projects/watch/digital_project.v Line: 41
-Warning (12125): Using design file minute.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: minute File: C:/intelFPGA_lite/Quartus_Projects/watch/minute.v Line: 1
-Info (12128): Elaborating entity "minute" for hierarchy "minute:MIN" File: C:/intelFPGA_lite/Quartus_Projects/watch/digital_project.v Line: 47
-Warning (12125): Using design file hour.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: hour File: C:/intelFPGA_lite/Quartus_Projects/watch/hour.v Line: 1
-Info (12128): Elaborating entity "hour" for hierarchy "hour:HOUR" File: C:/intelFPGA_lite/Quartus_Projects/watch/digital_project.v Line: 53
+    Info (12023): Found entity 1: clock File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 1
+Info (12128): Elaborating entity "clock" for hierarchy "clock:TIME" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 35
 Warning (12125): Using design file bcd.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: BCD File: C:/intelFPGA_lite/Quartus_Projects/watch/bcd.v Line: 1
-Info (12128): Elaborating entity "BCD" for hierarchy "BCD:CON0" File: C:/intelFPGA_lite/Quartus_Projects/watch/digital_project.v Line: 66
-Warning (10230): Verilog HDL assignment warning at bcd.v(32): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/Quartus_Projects/watch/bcd.v Line: 32
-Warning (10230): Verilog HDL assignment warning at bcd.v(30): truncated value with size 32 to match size of target (4) File: C:/intelFPGA_lite/Quartus_Projects/watch/bcd.v Line: 30
+    Info (12023): Found entity 1: BCD File: C:/Users/cube_/OneDrive/Github/Verilog_watch/bcd.v Line: 1
+Info (12128): Elaborating entity "BCD" for hierarchy "BCD:CON0" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 41
+Warning (10230): Verilog HDL assignment warning at bcd.v(25): truncated value with size 32 to match size of target (4) File: C:/Users/cube_/OneDrive/Github/Verilog_watch/bcd.v Line: 25
+Warning (10230): Verilog HDL assignment warning at bcd.v(23): truncated value with size 32 to match size of target (4) File: C:/Users/cube_/OneDrive/Github/Verilog_watch/bcd.v Line: 23
 Warning (12125): Using design file en_clk_lcd.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: en_clk_lcd File: C:/intelFPGA_lite/Quartus_Projects/watch/en_clk_lcd.v Line: 1
-Info (12128): Elaborating entity "en_clk_lcd" for hierarchy "en_clk_lcd:LCLK" File: C:/intelFPGA_lite/Quartus_Projects/watch/digital_project.v Line: 95
+    Info (12023): Found entity 1: en_clk_lcd File: C:/Users/cube_/OneDrive/Github/Verilog_watch/en_clk_lcd.v Line: 1
+Info (12128): Elaborating entity "en_clk_lcd" for hierarchy "en_clk_lcd:LCLK" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 58
 Warning (12125): Using design file lcd_display_string.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: lcd_display_string File: C:/intelFPGA_lite/Quartus_Projects/watch/lcd_display_string.v Line: 1
-Info (12128): Elaborating entity "lcd_display_string" for hierarchy "lcd_display_string:STR" File: C:/intelFPGA_lite/Quartus_Projects/watch/digital_project.v Line: 109
+    Info (12023): Found entity 1: lcd_display_string File: C:/Users/cube_/OneDrive/Github/Verilog_watch/lcd_display_string.v Line: 1
+Info (12128): Elaborating entity "lcd_display_string" for hierarchy "lcd_display_string:STR" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 70
 Warning (12125): Using design file lcd_driver.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: lcd_driver File: C:/intelFPGA_lite/Quartus_Projects/watch/lcd_driver.v Line: 1
-Info (12128): Elaborating entity "lcd_driver" for hierarchy "lcd_driver:DRV" File: C:/intelFPGA_lite/Quartus_Projects/watch/digital_project.v Line: 120
-Warning (10036): Verilog HDL or VHDL warning at lcd_driver.v(201): object "STATE" assigned a value but never read File: C:/intelFPGA_lite/Quartus_Projects/watch/lcd_driver.v Line: 201
-Warning (10230): Verilog HDL assignment warning at lcd_driver.v(48): truncated value with size 32 to match size of target (22) File: C:/intelFPGA_lite/Quartus_Projects/watch/lcd_driver.v Line: 48
-Warning (12241): 8 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+    Info (12023): Found entity 1: lcd_driver File: C:/Users/cube_/OneDrive/Github/Verilog_watch/lcd_driver.v Line: 1
+Info (12128): Elaborating entity "lcd_driver" for hierarchy "lcd_driver:DRV" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 81
+Warning (10036): Verilog HDL or VHDL warning at lcd_driver.v(201): object "STATE" assigned a value but never read File: C:/Users/cube_/OneDrive/Github/Verilog_watch/lcd_driver.v Line: 201
+Warning (10230): Verilog HDL assignment warning at lcd_driver.v(48): truncated value with size 32 to match size of target (22) File: C:/Users/cube_/OneDrive/Github/Verilog_watch/lcd_driver.v Line: 48
+Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "lcd_rw" is stuck at GND File: C:/intelFPGA_lite/Quartus_Projects/watch/digital_project.v Line: 12
+    Warning (13410): Pin "lcd_rw" is stuck at GND File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 12
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 3 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file C:/intelFPGA_lite/Quartus_Projects/watch/output_files/digital_project.map.smsg
+Info (144001): Generated suppressed messages file C:/Users/cube_/OneDrive/Github/Verilog_watch/output_files/digital_project.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 201 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 11 output pins
     Info (21061): Implemented 188 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 37 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 28 warnings
     Info: Peak virtual memory: 4761 megabytes
-    Info: Processing ended: Thu May 27 21:50:06 2021
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:21
+    Info: Processing ended: Thu May 27 23:02:48 2021
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:23
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/intelFPGA_lite/Quartus_Projects/watch/output_files/digital_project.map.smsg.
+The suppressed messages can be found in C:/Users/cube_/OneDrive/Github/Verilog_watch/output_files/digital_project.map.smsg.
 
 

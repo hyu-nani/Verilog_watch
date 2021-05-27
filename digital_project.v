@@ -34,60 +34,23 @@ module	digital_project (
 		.minute			(minute),
 		.hour				(hour));
 		
-	second						SEC(
-		.clk				(clk1),
-		.rst				(rstn),
-		.sec_10			(sec_10),
-		.sec1				(sec1));
-		
-	minute						MIN(
-		.clk				(clk1),
-		.rst				(rstn),
-		.min_10			(min_10),
-		.min1				(min1));
-		
-	hour							HOUR(
-		.clk				(clk1),
-		.rst				(rstn),
-		.hour_10			(hour_10),
-		.hour1			(hour1));
-	
-		
 	BCD							CON0(
 		.bin				(second),
-		.sec1				(sec1),
-		.sec_10			(sec_10),
-		.min1				(min1),
-		.min_10			(min_10),
-		.hour_10			(hour_10),
-		.hour1			(hour1),
 		.hundreds		(),
-		.tens				(tens1),
-		.ones				(ones1));
+		.tens				(tensS),
+		.ones				(onesS));
 			
 	BCD							CON1(
 		.bin				(minute),
-		.sec1				(sec1),
-		.sec_10			(sec_10),
-		.min1				(min1),
-		.min_10			(min_10),
-		.hour_10			(hour_10),
-		.hour1			(hour1),
 		.hundreds		(),
-		.tens				(tens2),
-		.ones				(ones2));
+		.tens				(tensM),
+		.ones				(onesM));
 		
 	BCD							CON2(
 		.bin				(hour),
-		.sec1				(sec1),
-		.sec_10			(sec_10),
-		.min1				(min1),
-		.min_10			(min_10),
-		.hour_10			(hour_10),
-		.hour1			(hour1),
 		.hundreds		(),
-		.tens				(tens3),
-		.ones				(ones3));
+		.tens				(tensH),
+		.ones				(onesH));
 		
 	en_clk_lcd					LCLK( 
 			.clk			(clk), 
@@ -98,12 +61,12 @@ module	digital_project (
 			.clk			(clk), 
 			.rst			(rstn), 
 			.index		(index_char), 
-			.ones1		(ones1),
-			.tens1		(tens1),
-			.ones2		(ones2),
-			.tens2		(tens2),
-			.ones3		(ones3),
-			.tens3		(tens3),
+			.ones1		(onesS),
+			.tens1		(tensS),
+			.ones2		(onesM),
+			.tens2		(tensM),
+			.ones3		(onesH),
+			.tens3		(tensH),
 			.out			(data_char) );
 	
 	lcd_driver					DRV ( 
