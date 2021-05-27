@@ -18,7 +18,7 @@ module clock(
 	reg	[11:0]year;
 	reg	[3:0]	month;
 	reg	[4:0]	day;
-	reg 	[7:0] second,minute,hour;		
+	reg 	[5:0] second,minute,hour;		
 	reg			clk1;
 	
 	clkone_gen			U0(
@@ -49,18 +49,17 @@ module clock(
 				second 	<= 6'd0;
 				minute	<=	minute + 6'd1;
 			end
-			else if(minute == 6'd59 && second == 6'd59) begin 
+			if(minute == 6'd59) begin 
 				minute	<= 6'd0;
 				hour		<=	hour + 6'd1;
 			end
-			else if(hour	==	6'd23 && minute == 6'd59 && second == 6'd59) begin
+			if(hour	==	6'd23) begin
 				second	<= 6'd0;
 				minute	<=	6'd0;
 				hour		<=	6'd0;
 				day		<=	day + 5'd1;
 			end 
-			else
-				second	<= second + 6'd1;
+			second	<= second + 6'd1;
 		end
 	end
 	

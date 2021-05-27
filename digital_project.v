@@ -19,10 +19,6 @@ module	digital_project (
 	
 	assign			rstn	= ~rst;
 	
-	clkone_gen					U0(
-		.clk				(clk),
-		.rst				(rst),
-		.clk1				(clk1));
 	
 	clock							TIME(
 		.clk				(clk), 
@@ -33,59 +29,26 @@ module	digital_project (
 		.second			(second),
 		.minute			(minute),
 		.hour				(hour));
-		
-	second						SEC(
-		.clk				(clk1),
-		.rst				(rstn),
-		.sec_10			(sec_10),
-		.sec1				(sec1));
-		
-	minute						MIN(
-		.clk				(clk1),
-		.rst				(rstn),
-		.min_10			(min_10),
-		.min1				(min1));
-		
-	hour							HOUR(
-		.clk				(clk1),
-		.rst				(rstn),
-		.hour_10			(hour_10),
-		.hour1			(hour1));
 	
 		
 	BCD							CON0(
 		.bin				(second),
-		.sec1				(sec1),
-		.sec_10			(sec_10),
-		.min1				(min1),
-		.min_10			(min_10),
-		.hour_10			(hour_10),
-		.hour1			(hour1),
-		.hundreds		(),
+		.rst				(rstn),
+		.hundreds		(hundreds),
 		.tens				(tens1),
 		.ones				(ones1));
 			
 	BCD							CON1(
 		.bin				(minute),
-		.sec1				(sec1),
-		.sec_10			(sec_10),
-		.min1				(min1),
-		.min_10			(min_10),
-		.hour_10			(hour_10),
-		.hour1			(hour1),
-		.hundreds		(),
+		.rst				(rstn),
+		.hundreds		(hundreds),
 		.tens				(tens2),
 		.ones				(ones2));
 		
 	BCD							CON2(
 		.bin				(hour),
-		.sec1				(sec1),
-		.sec_10			(sec_10),
-		.min1				(min1),
-		.min_10			(min_10),
-		.hour_10			(hour_10),
-		.hour1			(hour1),
-		.hundreds		(),
+		.rst				(rstn),
+		.hundreds		(hundreds),
 		.tens				(tens3),
 		.ones				(ones3));
 		
@@ -94,6 +57,8 @@ module	digital_project (
 			.rst			(rstn), 
 			.en_clk		(en_clk) );
 	
+			
+			
 	lcd_display_string		STR ( 
 			.clk			(clk), 
 			.rst			(rstn), 
