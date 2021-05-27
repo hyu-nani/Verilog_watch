@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE6E22) Path("F:/watch/output_files/") File("digital_project.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE6E22) Path("C:/intelFPGA_lite/Quartus_Projects/watch/output_files/") File("digital_project.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

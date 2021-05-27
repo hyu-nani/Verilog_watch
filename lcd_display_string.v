@@ -2,18 +2,18 @@ module	lcd_display_string(
 	clk, 
 	rst, 
 	index, 
-	sec_10,
-	sec1,
-	min_10,
-	min1,
-	hour_10,
-	hour1,
+	ones1,
+	tens1,
+	ones2,
+	tens2,
+	ones3,
+	tens3,
 	out);
 	
 	input				clk;
 	input				rst;
 	input		[4:0] index;
-	input		[3:0]	hour_10,hour1,min_10,min1,sec_10,sec1;
+	input		[3:0]	ones1, tens1, ones2, tens2, ones3, tens3;
 	output	[7:0] out;
 	
 	wire		[4:0] index;
@@ -42,12 +42,12 @@ module	lcd_display_string(
 				15 : out	<=	8'h20;
 				
 				// line2
-				16 : case (hour_10)
+				16 : case (tens3)
 						0 : out	<=	8'h30;
 						1 : out	<= 8'h31;
 						2 : out	<= 8'h32;
 					  endcase
-				17 : case (hour1)
+				17 : case (ones3)
 						0 : out	<=	8'h30;
 						1 : out	<= 8'h31;
 						2 : out	<= 8'h32;
@@ -60,7 +60,7 @@ module	lcd_display_string(
 						9 : out	<= 8'h39;
 					  endcase
 				18 : out	<=	8'h3A;
-				19 : case (min_10)
+				19 : case (tens2)
 						0 : out	<=	8'h30;
 						1 : out	<= 8'h31;
 						2 : out	<= 8'h32;
@@ -68,7 +68,7 @@ module	lcd_display_string(
 						4 : out	<= 8'h34;
 						5 : out	<= 8'h35;
 					  endcase
-				20 : case (min1)
+				20 : case (ones2)
 						0 : out	<=	8'h30;
 						1 : out	<= 8'h31;
 						2 : out	<= 8'h32;
@@ -81,7 +81,7 @@ module	lcd_display_string(
 						9 : out	<= 8'h39;
 					  endcase
 				21 : out	<=	8'h3A;
-				22 : case (sec_10)
+				22 : case (tens1)
 						0 : out	<=	8'h30;
 						1 : out	<= 8'h31;
 						2 : out	<= 8'h32;
@@ -89,7 +89,7 @@ module	lcd_display_string(
 						4 : out	<= 8'h34;
 						5 : out	<= 8'h35;
 					  endcase
-				23 : case (sec1)
+				23 : case (ones1)
 						0 : out	<=	8'h30;
 						1 : out	<= 8'h31;
 						2 : out	<= 8'h32;

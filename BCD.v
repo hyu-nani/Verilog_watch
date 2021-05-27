@@ -1,10 +1,17 @@
 module	BCD(
 	bin,
+	sec1,
+	sec_10,
+	min1,
+	min_10,
+	hour_10,
+	hour1,
 	hundreds,
 	tens,
 	ones);
 	
 	input		[7:0]	bin;
+	input		[3:0] sec1, sec_10, min1, min_10, hour1, hour_10;
 	output	[3:0]	hundreds, tens, ones;
 
 	reg		[3:0]	hundreds, tens, ones;
