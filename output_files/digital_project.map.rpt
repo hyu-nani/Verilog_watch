@@ -1,5 +1,5 @@
 Analysis & Synthesis report for digital_project
-Fri May 28 00:25:30 2021
+Fri May 28 00:46:00 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -53,7 +53,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri May 28 00:25:30 2021       ;
+; Analysis & Synthesis Status        ; Successful - Fri May 28 00:46:00 2021       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; digital_project                             ;
 ; Top-level Entity Name              ; digital_project                             ;
@@ -261,10 +261,10 @@ Encoding Type:  One-Hot
 ; lcd_driver:DRV|lcd_rw                  ; Stuck at GND due to stuck port data_in    ;
 ; lcd_display_string:STR|out[6,7]        ; Merged with lcd_display_string:STR|out[2] ;
 ; lcd_display_string:STR|out[2]          ; Stuck at GND due to stuck port data_in    ;
-; lcd_display_string:STR|out[1]          ; Merged with lcd_display_string:STR|out[3] ;
 ; lcd_driver:DRV|state~13                ; Lost fanout                               ;
 ; lcd_driver:DRV|state~14                ; Lost fanout                               ;
 ; lcd_driver:DRV|state~15                ; Lost fanout                               ;
+; lcd_display_string:STR|out[3]          ; Merged with lcd_display_string:STR|out[1] ;
 ; clock:TIME|clkone_gen:U0|cnt_clk1[0]   ; Merged with en_clk_lcd:LCLK|cnt_en[0]     ;
 ; clock:TIME|clkone_gen:U0|cnt_clk1[1]   ; Merged with en_clk_lcd:LCLK|cnt_en[1]     ;
 ; Total Number of Removed Registers = 10 ;                                           ;
@@ -417,7 +417,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         4 data inputs ; 42                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 2.86                        ;
+; Average LUT depth     ; 2.85                        ;
 +-----------------------+-----------------------------+
 
 
@@ -436,7 +436,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri May 28 00:25:18 2021
+    Info: Processing started: Fri May 28 00:45:49 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off digital_project -c digital_project
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -466,8 +466,17 @@ Info (12128): Elaborating entity "clock" for hierarchy "clock:TIME" File: C:/Use
 Warning (12125): Using design file bcd.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: BCD File: C:/Users/cube_/OneDrive/Github/Verilog_watch/bcd.v Line: 1
 Info (12128): Elaborating entity "BCD" for hierarchy "BCD:CON0" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 41
-Warning (10230): Verilog HDL assignment warning at bcd.v(25): truncated value with size 32 to match size of target (4) File: C:/Users/cube_/OneDrive/Github/Verilog_watch/bcd.v Line: 25
-Warning (10230): Verilog HDL assignment warning at bcd.v(23): truncated value with size 32 to match size of target (4) File: C:/Users/cube_/OneDrive/Github/Verilog_watch/bcd.v Line: 23
+Warning (10235): Verilog HDL Always Construct warning at bcd.v(20): variable "hundreds" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/cube_/OneDrive/Github/Verilog_watch/bcd.v Line: 20
+Warning (10235): Verilog HDL Always Construct warning at bcd.v(21): variable "hundreds" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/cube_/OneDrive/Github/Verilog_watch/bcd.v Line: 21
+Warning (10235): Verilog HDL Always Construct warning at bcd.v(22): variable "tens" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/cube_/OneDrive/Github/Verilog_watch/bcd.v Line: 22
+Warning (10235): Verilog HDL Always Construct warning at bcd.v(23): variable "tens" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/cube_/OneDrive/Github/Verilog_watch/bcd.v Line: 23
+Warning (10235): Verilog HDL Always Construct warning at bcd.v(24): variable "ones" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/cube_/OneDrive/Github/Verilog_watch/bcd.v Line: 24
+Warning (10235): Verilog HDL Always Construct warning at bcd.v(25): variable "ones" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/cube_/OneDrive/Github/Verilog_watch/bcd.v Line: 25
+Warning (10235): Verilog HDL Always Construct warning at bcd.v(27): variable "hundreds" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/cube_/OneDrive/Github/Verilog_watch/bcd.v Line: 27
+Warning (10235): Verilog HDL Always Construct warning at bcd.v(28): variable "tens" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/cube_/OneDrive/Github/Verilog_watch/bcd.v Line: 28
+Warning (10235): Verilog HDL Always Construct warning at bcd.v(29): variable "tens" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/cube_/OneDrive/Github/Verilog_watch/bcd.v Line: 29
+Warning (10235): Verilog HDL Always Construct warning at bcd.v(30): variable "ones" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/cube_/OneDrive/Github/Verilog_watch/bcd.v Line: 30
+Warning (10235): Verilog HDL Always Construct warning at bcd.v(31): variable "ones" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/cube_/OneDrive/Github/Verilog_watch/bcd.v Line: 31
 Warning (12125): Using design file en_clk_lcd.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: en_clk_lcd File: C:/Users/cube_/OneDrive/Github/Verilog_watch/en_clk_lcd.v Line: 1
 Info (12128): Elaborating entity "en_clk_lcd" for hierarchy "en_clk_lcd:LCLK" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 58
@@ -487,15 +496,15 @@ Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/cube_/OneDrive/Github/Verilog_watch/output_files/digital_project.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 201 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 200 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 11 output pins
-    Info (21061): Implemented 188 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 28 warnings
-    Info: Peak virtual memory: 4761 megabytes
-    Info: Processing ended: Fri May 28 00:25:30 2021
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:22
+    Info (21061): Implemented 187 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 37 warnings
+    Info: Peak virtual memory: 4760 megabytes
+    Info: Processing ended: Fri May 28 00:46:00 2021
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:23
 
 
 +------------------------------------------+
