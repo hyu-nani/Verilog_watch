@@ -1,5 +1,5 @@
 Analysis & Synthesis report for digital_project
-Fri May 28 00:46:00 2021
+Fri May 28 00:59:55 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -53,15 +53,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri May 28 00:46:00 2021       ;
+; Analysis & Synthesis Status        ; Successful - Fri May 28 00:59:55 2021       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; digital_project                             ;
 ; Top-level Entity Name              ; digital_project                             ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 186                                         ;
-;     Total combinational functions  ; 178                                         ;
-;     Dedicated logic registers      ; 121                                         ;
-; Total registers                    ; 121                                         ;
+; Total logic elements               ; 206                                         ;
+;     Total combinational functions  ; 198                                         ;
+;     Dedicated logic registers      ; 127                                         ;
+; Total registers                    ; 127                                         ;
 ; Total pins                         ; 13                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -169,7 +169,8 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -193,20 +194,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 186       ;
+; Estimated Total logic elements              ; 206       ;
 ;                                             ;           ;
-; Total combinational functions               ; 178       ;
+; Total combinational functions               ; 198       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 42        ;
-;     -- 3 input functions                    ; 12        ;
-;     -- <=2 input functions                  ; 124       ;
+;     -- 4 input functions                    ; 59        ;
+;     -- 3 input functions                    ; 8         ;
+;     -- <=2 input functions                  ; 131       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 91        ;
-;     -- arithmetic mode                      ; 87        ;
+;     -- normal mode                          ; 105       ;
+;     -- arithmetic mode                      ; 93        ;
 ;                                             ;           ;
-; Total registers                             ; 121       ;
-;     -- Dedicated logic registers            ; 121       ;
+; Total registers                             ; 127       ;
+;     -- Dedicated logic registers            ; 127       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 13        ;
@@ -214,9 +215,9 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; rst~input ;
-; Maximum fan-out                             ; 121       ;
-; Total fan-out                               ; 909       ;
-; Average fan-out                             ; 2.80      ;
+; Maximum fan-out                             ; 127       ;
+; Total fan-out                               ; 979       ;
+; Average fan-out                             ; 2.79      ;
 +---------------------------------------------+-----------+
 
 
@@ -225,8 +226,8 @@ refer to the applicable agreement for further details.
 +-----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+--------------------+--------------+
 ; Compilation Hierarchy Node  ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                       ; Entity Name        ; Library Name ;
 +-----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+--------------------+--------------+
-; |digital_project            ; 178 (1)             ; 121 (0)                   ; 0           ; 0            ; 0       ; 0         ; 13   ; 0            ; |digital_project                          ; digital_project    ; work         ;
-;    |clock:TIME|             ; 75 (30)             ; 42 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |digital_project|clock:TIME               ; clock              ; work         ;
+; |digital_project            ; 198 (1)             ; 127 (0)                   ; 0           ; 0            ; 0       ; 0         ; 13   ; 0            ; |digital_project                          ; digital_project    ; work         ;
+;    |clock:TIME|             ; 95 (50)             ; 48 (24)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |digital_project|clock:TIME               ; clock              ; work         ;
 ;       |clkone_gen:U0|       ; 45 (45)             ; 24 (24)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |digital_project|clock:TIME|clkone_gen:U0 ; clkone_gen         ; work         ;
 ;    |en_clk_lcd:LCLK|        ; 29 (29)             ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |digital_project|en_clk_lcd:LCLK          ; en_clk_lcd         ; work         ;
 ;    |lcd_display_string:STR| ; 6 (6)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |digital_project|lcd_display_string:STR   ; lcd_display_string ; work         ;
@@ -261,10 +262,10 @@ Encoding Type:  One-Hot
 ; lcd_driver:DRV|lcd_rw                  ; Stuck at GND due to stuck port data_in    ;
 ; lcd_display_string:STR|out[6,7]        ; Merged with lcd_display_string:STR|out[2] ;
 ; lcd_display_string:STR|out[2]          ; Stuck at GND due to stuck port data_in    ;
+; lcd_display_string:STR|out[1]          ; Merged with lcd_display_string:STR|out[3] ;
 ; lcd_driver:DRV|state~13                ; Lost fanout                               ;
 ; lcd_driver:DRV|state~14                ; Lost fanout                               ;
 ; lcd_driver:DRV|state~15                ; Lost fanout                               ;
-; lcd_display_string:STR|out[3]          ; Merged with lcd_display_string:STR|out[1] ;
 ; clock:TIME|clkone_gen:U0|cnt_clk1[0]   ; Merged with en_clk_lcd:LCLK|cnt_en[0]     ;
 ; clock:TIME|clkone_gen:U0|cnt_clk1[1]   ; Merged with en_clk_lcd:LCLK|cnt_en[1]     ;
 ; Total Number of Removed Registers = 10 ;                                           ;
@@ -276,10 +277,10 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 121   ;
-; Number of registers using Synchronous Clear  ; 16    ;
-; Number of registers using Synchronous Load   ; 28    ;
-; Number of registers using Asynchronous Clear ; 121   ;
+; Total registers                              ; 127   ;
+; Number of registers using Synchronous Clear  ; 10    ;
+; Number of registers using Synchronous Load   ; 22    ;
+; Number of registers using Asynchronous Clear ; 127   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 23    ;
 ; Number of registers using Preset             ; 0     ;
@@ -291,9 +292,9 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |digital_project|lcd_driver:DRV|cnt_en_clk[7] ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |digital_project|clock:TIME|hour[1]           ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |digital_project|clock:TIME|minute[3]         ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |digital_project|lcd_driver:DRV|cnt_en_clk[4] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |digital_project|clock:TIME|hour[6]           ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |digital_project|clock:TIME|minute[1]         ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |digital_project|lcd_driver:DRV|state         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
 
@@ -374,13 +375,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
 ; year   ; Output ; Warning  ; Output or bidir port (12 bits) is wider than the port expression (1 bits) it drives; bit(s) "year[11..1]" have no fanouts ;
 ; year   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                       ;
-; month  ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "month[3..1]" have no fanouts  ;
+; month  ; Output ; Warning  ; Output or bidir port (8 bits) is wider than the port expression (1 bits) it drives; bit(s) "month[7..1]" have no fanouts  ;
 ; month  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                       ;
-; day    ; Output ; Warning  ; Output or bidir port (5 bits) is wider than the port expression (1 bits) it drives; bit(s) "day[4..1]" have no fanouts    ;
+; day    ; Output ; Warning  ; Output or bidir port (8 bits) is wider than the port expression (1 bits) it drives; bit(s) "day[7..1]" have no fanouts    ;
 ; day    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                       ;
-; second ; Output ; Warning  ; Output or bidir port (6 bits) is wider than the port expression (1 bits) it drives; bit(s) "second[5..1]" have no fanouts ;
-; minute ; Output ; Warning  ; Output or bidir port (6 bits) is wider than the port expression (1 bits) it drives; bit(s) "minute[5..1]" have no fanouts ;
-; hour   ; Output ; Warning  ; Output or bidir port (6 bits) is wider than the port expression (1 bits) it drives; bit(s) "hour[5..1]" have no fanouts   ;
+; second ; Output ; Warning  ; Output or bidir port (8 bits) is wider than the port expression (1 bits) it drives; bit(s) "second[7..1]" have no fanouts ;
+; minute ; Output ; Warning  ; Output or bidir port (8 bits) is wider than the port expression (1 bits) it drives; bit(s) "minute[7..1]" have no fanouts ;
+; hour   ; Output ; Warning  ; Output or bidir port (8 bits) is wider than the port expression (1 bits) it drives; bit(s) "hour[7..1]" have no fanouts   ;
 +--------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -399,25 +400,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 13                          ;
-; cycloneiii_ff         ; 121                         ;
-;     CLR               ; 70                          ;
-;     CLR SCLR SLD      ; 6                           ;
+; cycloneiii_ff         ; 127                         ;
+;     CLR               ; 82                          ;
 ;     CLR SLD           ; 22                          ;
 ;     ENA CLR           ; 13                          ;
 ;     ENA CLR SCLR      ; 10                          ;
-; cycloneiii_lcell_comb ; 178                         ;
-;     arith             ; 87                          ;
-;         2 data inputs ; 84                          ;
-;         3 data inputs ; 3                           ;
-;     normal            ; 91                          ;
+; cycloneiii_lcell_comb ; 198                         ;
+;     arith             ; 93                          ;
+;         2 data inputs ; 91                          ;
+;         3 data inputs ; 2                           ;
+;     normal            ; 105                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 9                           ;
 ;         2 data inputs ; 30                          ;
-;         3 data inputs ; 9                           ;
-;         4 data inputs ; 42                          ;
+;         3 data inputs ; 6                           ;
+;         4 data inputs ; 59                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 2.85                        ;
+; Average LUT depth     ; 2.84                        ;
 +-----------------------+-----------------------------+
 
 
@@ -436,7 +436,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri May 28 00:45:49 2021
+    Info: Processing started: Fri May 28 00:59:43 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off digital_project -c digital_project
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -466,17 +466,6 @@ Info (12128): Elaborating entity "clock" for hierarchy "clock:TIME" File: C:/Use
 Warning (12125): Using design file bcd.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: BCD File: C:/Users/cube_/OneDrive/Github/Verilog_watch/bcd.v Line: 1
 Info (12128): Elaborating entity "BCD" for hierarchy "BCD:CON0" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 41
-Warning (10235): Verilog HDL Always Construct warning at bcd.v(20): variable "hundreds" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/cube_/OneDrive/Github/Verilog_watch/bcd.v Line: 20
-Warning (10235): Verilog HDL Always Construct warning at bcd.v(21): variable "hundreds" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/cube_/OneDrive/Github/Verilog_watch/bcd.v Line: 21
-Warning (10235): Verilog HDL Always Construct warning at bcd.v(22): variable "tens" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/cube_/OneDrive/Github/Verilog_watch/bcd.v Line: 22
-Warning (10235): Verilog HDL Always Construct warning at bcd.v(23): variable "tens" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/cube_/OneDrive/Github/Verilog_watch/bcd.v Line: 23
-Warning (10235): Verilog HDL Always Construct warning at bcd.v(24): variable "ones" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/cube_/OneDrive/Github/Verilog_watch/bcd.v Line: 24
-Warning (10235): Verilog HDL Always Construct warning at bcd.v(25): variable "ones" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/cube_/OneDrive/Github/Verilog_watch/bcd.v Line: 25
-Warning (10235): Verilog HDL Always Construct warning at bcd.v(27): variable "hundreds" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/cube_/OneDrive/Github/Verilog_watch/bcd.v Line: 27
-Warning (10235): Verilog HDL Always Construct warning at bcd.v(28): variable "tens" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/cube_/OneDrive/Github/Verilog_watch/bcd.v Line: 28
-Warning (10235): Verilog HDL Always Construct warning at bcd.v(29): variable "tens" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/cube_/OneDrive/Github/Verilog_watch/bcd.v Line: 29
-Warning (10235): Verilog HDL Always Construct warning at bcd.v(30): variable "ones" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/cube_/OneDrive/Github/Verilog_watch/bcd.v Line: 30
-Warning (10235): Verilog HDL Always Construct warning at bcd.v(31): variable "ones" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/cube_/OneDrive/Github/Verilog_watch/bcd.v Line: 31
 Warning (12125): Using design file en_clk_lcd.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: en_clk_lcd File: C:/Users/cube_/OneDrive/Github/Verilog_watch/en_clk_lcd.v Line: 1
 Info (12128): Elaborating entity "en_clk_lcd" for hierarchy "en_clk_lcd:LCLK" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 58
@@ -496,14 +485,14 @@ Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/cube_/OneDrive/Github/Verilog_watch/output_files/digital_project.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 200 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 221 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 11 output pins
-    Info (21061): Implemented 187 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 37 warnings
-    Info: Peak virtual memory: 4760 megabytes
-    Info: Processing ended: Fri May 28 00:46:00 2021
-    Info: Elapsed time: 00:00:11
+    Info (21061): Implemented 208 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 26 warnings
+    Info: Peak virtual memory: 4777 megabytes
+    Info: Processing ended: Fri May 28 00:59:55 2021
+    Info: Elapsed time: 00:00:12
     Info: Total CPU time (on all processors): 00:00:23
 
 
