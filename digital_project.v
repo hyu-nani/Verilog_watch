@@ -94,8 +94,6 @@ module	digital_project (
 			.rst			(rstn), 
 			.en_clk		(en_clk) );
 	
-			
-			
 	lcd_display_string		STR ( 
 			.clk			(clk), 
 			.rst			(rstn), 
