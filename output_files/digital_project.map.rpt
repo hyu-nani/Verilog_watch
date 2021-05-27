@@ -1,5 +1,5 @@
 Analysis & Synthesis report for digital_project
-Wed May 26 21:37:00 2021
+Thu May 27 13:53:34 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -10,7 +10,23 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |digital_project|lcd_driver:DRV|state
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: lcd_driver:DRV
+ 13. Port Connectivity Checks: "lcd_display_string:STR"
+ 14. Port Connectivity Checks: "BCD:CON2"
+ 15. Port Connectivity Checks: "BCD:CON1"
+ 16. Port Connectivity Checks: "BCD:CON0"
+ 17. Port Connectivity Checks: "clock:TIME"
+ 18. Post-Synthesis Netlist Statistics for Top Partition
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
+ 21. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -36,20 +52,20 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Wed May 26 21:37:00 2021           ;
+; Analysis & Synthesis Status        ; Successful - Thu May 27 13:53:34 2021       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; digital_project                             ;
 ; Top-level Entity Name              ; digital_project                             ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 187                                         ;
+;     Total combinational functions  ; 179                                         ;
+;     Dedicated logic registers      ; 123                                         ;
+; Total registers                    ; 123                                         ;
+; Total pins                         ; 13                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -148,11 +164,258 @@ refer to the applicable agreement for further details.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                          ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                      ; Library ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------+---------+
+; digital_project.v                ; yes             ; User Verilog HDL File        ; C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v    ;         ;
+; clock.v                          ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v              ;         ;
+; clkone_gen.v                     ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/cube_/OneDrive/Github/Verilog_watch/clkone_gen.v         ;         ;
+; bcd.v                            ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/cube_/OneDrive/Github/Verilog_watch/bcd.v                ;         ;
+; en_clk_lcd.v                     ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/cube_/OneDrive/Github/Verilog_watch/en_clk_lcd.v         ;         ;
+; lcd_display_string.v             ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/cube_/OneDrive/Github/Verilog_watch/lcd_display_string.v ;         ;
+; lcd_driver.v                     ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/cube_/OneDrive/Github/Verilog_watch/lcd_driver.v         ;         ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 187       ;
+;                                             ;           ;
+; Total combinational functions               ; 179       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 42        ;
+;     -- 3 input functions                    ; 11        ;
+;     -- <=2 input functions                  ; 126       ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 91        ;
+;     -- arithmetic mode                      ; 88        ;
+;                                             ;           ;
+; Total registers                             ; 123       ;
+;     -- Dedicated logic registers            ; 123       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 13        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; rst~input ;
+; Maximum fan-out                             ; 123       ;
+; Total fan-out                               ; 916       ;
+; Average fan-out                             ; 2.79      ;
++---------------------------------------------+-----------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                    ;
++-----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+--------------------+--------------+
+; Compilation Hierarchy Node  ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                       ; Entity Name        ; Library Name ;
++-----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+--------------------+--------------+
+; |digital_project            ; 179 (1)             ; 123 (0)                   ; 0           ; 0            ; 0       ; 0         ; 13   ; 0            ; |digital_project                          ; digital_project    ; work         ;
+;    |clock:TIME|             ; 76 (30)             ; 44 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |digital_project|clock:TIME               ; clock              ; work         ;
+;       |clkone_gen:U0|       ; 46 (46)             ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |digital_project|clock:TIME|clkone_gen:U0 ; clkone_gen         ; work         ;
+;    |en_clk_lcd:LCLK|        ; 29 (29)             ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |digital_project|en_clk_lcd:LCLK          ; en_clk_lcd         ; work         ;
+;    |lcd_display_string:STR| ; 6 (6)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |digital_project|lcd_display_string:STR   ; lcd_display_string ; work         ;
+;    |lcd_driver:DRV|         ; 67 (67)             ; 57 (57)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |digital_project|lcd_driver:DRV           ; lcd_driver         ; work         ;
++-----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+--------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |digital_project|lcd_driver:DRV|state                                                                                                                        ;
++--------------------+-------------+--------------------+----------------+---------------+------------------+----------------+----------------+------------+-------------------+
+; Name               ; state.LINE2 ; state.PRINT_STRING ; state.MODE_SET ; state.DISP_ON ; state.DISP_CLEAR ; state.DISP_OFF ; state.FUNC_SET ; state.IDLE ; state.RETURN_HOME ;
++--------------------+-------------+--------------------+----------------+---------------+------------------+----------------+----------------+------------+-------------------+
+; state.IDLE         ; 0           ; 0                  ; 0              ; 0             ; 0                ; 0              ; 0              ; 0          ; 0                 ;
+; state.FUNC_SET     ; 0           ; 0                  ; 0              ; 0             ; 0                ; 0              ; 1              ; 1          ; 0                 ;
+; state.DISP_OFF     ; 0           ; 0                  ; 0              ; 0             ; 0                ; 1              ; 0              ; 1          ; 0                 ;
+; state.DISP_CLEAR   ; 0           ; 0                  ; 0              ; 0             ; 1                ; 0              ; 0              ; 1          ; 0                 ;
+; state.DISP_ON      ; 0           ; 0                  ; 0              ; 1             ; 0                ; 0              ; 0              ; 1          ; 0                 ;
+; state.MODE_SET     ; 0           ; 0                  ; 1              ; 0             ; 0                ; 0              ; 0              ; 1          ; 0                 ;
+; state.PRINT_STRING ; 0           ; 1                  ; 0              ; 0             ; 0                ; 0              ; 0              ; 1          ; 0                 ;
+; state.LINE2        ; 1           ; 0                  ; 0              ; 0             ; 0                ; 0              ; 0              ; 1          ; 0                 ;
+; state.RETURN_HOME  ; 0           ; 0                  ; 0              ; 0             ; 0                ; 0              ; 0              ; 1          ; 1                 ;
++--------------------+-------------+--------------------+----------------+---------------+------------------+----------------+----------------+------------+-------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                ;
++---------------------------------------+-------------------------------------------+
+; Register name                         ; Reason for Removal                        ;
++---------------------------------------+-------------------------------------------+
+; lcd_driver:DRV|lcd_rw                 ; Stuck at GND due to stuck port data_in    ;
+; lcd_display_string:STR|out[6,7]       ; Merged with lcd_display_string:STR|out[2] ;
+; lcd_display_string:STR|out[2]         ; Stuck at GND due to stuck port data_in    ;
+; lcd_display_string:STR|out[1]         ; Merged with lcd_display_string:STR|out[3] ;
+; lcd_driver:DRV|state~13               ; Lost fanout                               ;
+; lcd_driver:DRV|state~14               ; Lost fanout                               ;
+; lcd_driver:DRV|state~15               ; Lost fanout                               ;
+; Total Number of Removed Registers = 8 ;                                           ;
++---------------------------------------+-------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 123   ;
+; Number of registers using Synchronous Clear  ; 16    ;
+; Number of registers using Synchronous Load   ; 28    ;
+; Number of registers using Asynchronous Clear ; 123   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 23    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |digital_project|lcd_driver:DRV|cnt_en_clk[7] ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |digital_project|clock:TIME|hour[1]           ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |digital_project|clock:TIME|minute[3]         ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |digital_project|lcd_driver:DRV|state         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lcd_driver:DRV ;
++----------------+---------+----------------------------------+
+; Parameter Name ; Value   ; Type                             ;
++----------------+---------+----------------------------------+
+; IDLE           ; 0000    ; Unsigned Binary                  ;
+; FUNC_SET       ; 0001    ; Unsigned Binary                  ;
+; DISP_OFF       ; 0010    ; Unsigned Binary                  ;
+; DISP_CLEAR     ; 0011    ; Unsigned Binary                  ;
+; DISP_ON        ; 0100    ; Unsigned Binary                  ;
+; MODE_SET       ; 0101    ; Unsigned Binary                  ;
+; PRINT_STRING   ; 0110    ; Unsigned Binary                  ;
+; LINE2          ; 0111    ; Unsigned Binary                  ;
+; RETURN_HOME    ; 1000    ; Unsigned Binary                  ;
+; T_PW           ; 2499999 ; Signed Integer                   ;
++----------------+---------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "lcd_display_string:STR"                                                                                                                           ;
++---------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                         ;
++---------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+; sec_10  ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "sec_10[3..1]" will be connected to GND.  ;
+; sec1    ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "sec1[3..1]" will be connected to GND.    ;
+; min_10  ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "min_10[3..1]" will be connected to GND.  ;
+; min1    ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "min1[3..1]" will be connected to GND.    ;
+; hour_10 ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "hour_10[3..1]" will be connected to GND. ;
+; hour1   ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "hour1[3..1]" will be connected to GND.   ;
++---------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "BCD:CON2"                                                                                                                                       ;
++----------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                                                     ;
++----------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; bin      ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "bin[7..1]" will be connected to GND. ;
+; hundreds ; Output ; Info     ; Explicitly unconnected                                                                                                                      ;
+; tens     ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "tens[3..1]" have no fanouts                     ;
+; ones     ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "ones[3..1]" have no fanouts                     ;
++----------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "BCD:CON1"                                                                                                                                       ;
++----------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                                                     ;
++----------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; bin      ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "bin[7..1]" will be connected to GND. ;
+; hundreds ; Output ; Info     ; Explicitly unconnected                                                                                                                      ;
+; tens     ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "tens[3..1]" have no fanouts                     ;
+; ones     ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "ones[3..1]" have no fanouts                     ;
++----------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "BCD:CON0"                                                                                                                                       ;
++----------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                                                     ;
++----------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; bin      ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "bin[7..1]" will be connected to GND. ;
+; hundreds ; Output ; Info     ; Explicitly unconnected                                                                                                                      ;
+; tens     ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "tens[3..1]" have no fanouts                     ;
+; ones     ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "ones[3..1]" have no fanouts                     ;
++----------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "clock:TIME"                                                                                                                 ;
++--------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                                                                   ;
++--------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
+; year   ; Output ; Warning  ; Output or bidir port (12 bits) is wider than the port expression (1 bits) it drives; bit(s) "year[11..1]" have no fanouts ;
+; year   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                       ;
+; month  ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "month[3..1]" have no fanouts  ;
+; month  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                       ;
+; day    ; Output ; Warning  ; Output or bidir port (5 bits) is wider than the port expression (1 bits) it drives; bit(s) "day[4..1]" have no fanouts    ;
+; day    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                       ;
+; second ; Output ; Warning  ; Output or bidir port (6 bits) is wider than the port expression (1 bits) it drives; bit(s) "second[5..1]" have no fanouts ;
+; minute ; Output ; Warning  ; Output or bidir port (6 bits) is wider than the port expression (1 bits) it drives; bit(s) "minute[5..1]" have no fanouts ;
+; hour   ; Output ; Warning  ; Output or bidir port (6 bits) is wider than the port expression (1 bits) it drives; bit(s) "hour[5..1]" have no fanouts   ;
++--------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 13                          ;
+; cycloneiii_ff         ; 123                         ;
+;     CLR               ; 72                          ;
+;     CLR SCLR SLD      ; 6                           ;
+;     CLR SLD           ; 22                          ;
+;     ENA CLR           ; 13                          ;
+;     ENA CLR SCLR      ; 10                          ;
+; cycloneiii_lcell_comb ; 179                         ;
+;     arith             ; 88                          ;
+;         2 data inputs ; 86                          ;
+;         3 data inputs ; 2                           ;
+;     normal            ; 91                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 9                           ;
+;         2 data inputs ; 30                          ;
+;         3 data inputs ; 9                           ;
+;         4 data inputs ; 42                          ;
+;                       ;                             ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 2.88                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -161,7 +424,7 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed May 26 21:36:49 2021
+    Info: Processing started: Thu May 27 13:53:22 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off digital_project -c digital_project
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -183,57 +446,48 @@ Warning (10236): Verilog HDL Implicit Net warning at digital_project.v(48): crea
 Info (12127): Elaborating entity "digital_project" for the top level hierarchy
 Warning (12125): Using design file clock.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: clock File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at clock.v(26): created implicit net for "clk1" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 26
 Info (12128): Elaborating entity "clock" for hierarchy "clock:TIME" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 30
-Error (10200): Verilog HDL Conditional Statement error at clock.v(37): cannot match operand(s) in the condition to the corresponding edges in the enclosing event control of the always construct File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 37
-Error (10200): Verilog HDL Conditional Statement error at clock.v(41): cannot match operand(s) in the condition to the corresponding edges in the enclosing event control of the always construct File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 41
-Error (10200): Verilog HDL Conditional Statement error at clock.v(46): cannot match operand(s) in the condition to the corresponding edges in the enclosing event control of the always construct File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 46
-Error (10200): Verilog HDL Conditional Statement error at clock.v(50): cannot match operand(s) in the condition to the corresponding edges in the enclosing event control of the always construct File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 50
-Error (10200): Verilog HDL Conditional Statement error at clock.v(54): cannot match operand(s) in the condition to the corresponding edges in the enclosing event control of the always construct File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 54
-Critical Warning (10237): Verilog HDL warning at clock.v(61): can't infer register for assignment in edge-triggered always construct because the clock isn't obvious. Generated combinational logic instead File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 61
-Warning (10240): Verilog HDL Always Construct warning at clock.v(28): inferring latch(es) for variable "year", which holds its previous value in one or more paths through the always construct File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 28
-Warning (10240): Verilog HDL Always Construct warning at clock.v(28): inferring latch(es) for variable "month", which holds its previous value in one or more paths through the always construct File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 28
-Warning (10240): Verilog HDL Always Construct warning at clock.v(28): inferring latch(es) for variable "day", which holds its previous value in one or more paths through the always construct File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 28
-Warning (10240): Verilog HDL Always Construct warning at clock.v(28): inferring latch(es) for variable "minute", which holds its previous value in one or more paths through the always construct File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 28
-Warning (10240): Verilog HDL Always Construct warning at clock.v(28): inferring latch(es) for variable "hour", which holds its previous value in one or more paths through the always construct File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 28
-Info (10041): Inferred latch for "hour[0]" at clock.v(28) File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 28
-Info (10041): Inferred latch for "hour[1]" at clock.v(28) File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 28
-Info (10041): Inferred latch for "hour[2]" at clock.v(28) File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 28
-Info (10041): Inferred latch for "hour[3]" at clock.v(28) File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 28
-Info (10041): Inferred latch for "hour[4]" at clock.v(28) File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 28
-Info (10041): Inferred latch for "hour[5]" at clock.v(28) File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 28
-Info (10041): Inferred latch for "minute[0]" at clock.v(28) File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 28
-Info (10041): Inferred latch for "minute[1]" at clock.v(28) File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 28
-Info (10041): Inferred latch for "minute[2]" at clock.v(28) File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 28
-Info (10041): Inferred latch for "minute[3]" at clock.v(28) File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 28
-Info (10041): Inferred latch for "minute[4]" at clock.v(28) File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 28
-Info (10041): Inferred latch for "minute[5]" at clock.v(28) File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 28
-Info (10041): Inferred latch for "day[0]" at clock.v(28) File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 28
-Info (10041): Inferred latch for "day[1]" at clock.v(28) File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 28
-Info (10041): Inferred latch for "day[2]" at clock.v(28) File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 28
-Info (10041): Inferred latch for "day[3]" at clock.v(28) File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 28
-Info (10041): Inferred latch for "day[4]" at clock.v(28) File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 28
-Info (10041): Inferred latch for "month[0]" at clock.v(28) File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 28
-Info (10041): Inferred latch for "month[1]" at clock.v(28) File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 28
-Info (10041): Inferred latch for "month[2]" at clock.v(28) File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 28
-Info (10041): Inferred latch for "month[3]" at clock.v(28) File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 28
-Info (10041): Inferred latch for "year[0]" at clock.v(28) File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 28
-Info (10041): Inferred latch for "year[1]" at clock.v(28) File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 28
-Info (10041): Inferred latch for "year[2]" at clock.v(28) File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 28
-Info (10041): Inferred latch for "year[3]" at clock.v(28) File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 28
-Info (10041): Inferred latch for "year[4]" at clock.v(28) File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 28
-Info (10041): Inferred latch for "year[5]" at clock.v(28) File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 28
-Info (10041): Inferred latch for "year[6]" at clock.v(28) File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 28
-Info (10041): Inferred latch for "year[7]" at clock.v(28) File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 28
-Info (10041): Inferred latch for "year[8]" at clock.v(28) File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 28
-Info (10041): Inferred latch for "year[9]" at clock.v(28) File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 28
-Info (10041): Inferred latch for "year[10]" at clock.v(28) File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 28
-Info (10041): Inferred latch for "year[11]" at clock.v(28) File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 28
-Error (12152): Can't elaborate user hierarchy "clock:TIME" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 30
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 6 errors, 22 warnings
-    Error: Peak virtual memory: 4704 megabytes
-    Error: Processing ended: Wed May 26 21:37:00 2021
-    Error: Elapsed time: 00:00:11
-    Error: Total CPU time (on all processors): 00:00:23
+Warning (12125): Using design file clkone_gen.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: clkone_gen File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clkone_gen.v Line: 1
+Info (12128): Elaborating entity "clkone_gen" for hierarchy "clock:TIME|clkone_gen:U0" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/clock.v Line: 27
+Warning (12125): Using design file bcd.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: BCD File: C:/Users/cube_/OneDrive/Github/Verilog_watch/bcd.v Line: 1
+Info (12128): Elaborating entity "BCD" for hierarchy "BCD:CON0" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 36
+Warning (10230): Verilog HDL assignment warning at bcd.v(25): truncated value with size 32 to match size of target (4) File: C:/Users/cube_/OneDrive/Github/Verilog_watch/bcd.v Line: 25
+Warning (10230): Verilog HDL assignment warning at bcd.v(23): truncated value with size 32 to match size of target (4) File: C:/Users/cube_/OneDrive/Github/Verilog_watch/bcd.v Line: 23
+Warning (12125): Using design file en_clk_lcd.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: en_clk_lcd File: C:/Users/cube_/OneDrive/Github/Verilog_watch/en_clk_lcd.v Line: 1
+Info (12128): Elaborating entity "en_clk_lcd" for hierarchy "en_clk_lcd:LCLK" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 53
+Warning (12125): Using design file lcd_display_string.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: lcd_display_string File: C:/Users/cube_/OneDrive/Github/Verilog_watch/lcd_display_string.v Line: 1
+Info (12128): Elaborating entity "lcd_display_string" for hierarchy "lcd_display_string:STR" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 65
+Warning (12125): Using design file lcd_driver.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: lcd_driver File: C:/Users/cube_/OneDrive/Github/Verilog_watch/lcd_driver.v Line: 1
+Info (12128): Elaborating entity "lcd_driver" for hierarchy "lcd_driver:DRV" File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 76
+Warning (10036): Verilog HDL or VHDL warning at lcd_driver.v(201): object "STATE" assigned a value but never read File: C:/Users/cube_/OneDrive/Github/Verilog_watch/lcd_driver.v Line: 201
+Warning (10230): Verilog HDL assignment warning at lcd_driver.v(48): truncated value with size 32 to match size of target (22) File: C:/Users/cube_/OneDrive/Github/Verilog_watch/lcd_driver.v Line: 48
+Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "lcd_rw" is stuck at GND File: C:/Users/cube_/OneDrive/Github/Verilog_watch/digital_project.v Line: 12
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 3 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Users/cube_/OneDrive/Github/Verilog_watch/output_files/digital_project.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 202 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 11 output pins
+    Info (21061): Implemented 189 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 27 warnings
+    Info: Peak virtual memory: 4761 megabytes
+    Info: Processing ended: Thu May 27 13:53:34 2021
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:22
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/cube_/OneDrive/Github/Verilog_watch/output_files/digital_project.map.smsg.
 
 

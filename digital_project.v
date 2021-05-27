@@ -20,37 +20,37 @@ module	digital_project (
 	assign			rstn	= ~rst;
 	
 	clock						TIME(
-		.clk		(clk), 
-		.rst		(rst),
-		.year		(year),
-		.month	(month),
-		.day		(day),
-		.second	(second),
-		.minute	(minute),
-		.hour		(hour));
+		.clk			(clk), 
+		.rst			(rst),
+		.year			(year),
+		.month		(month),
+		.day			(day),
+		.second		(second),
+		.minute		(minute),
+		.hour			(hour));
 	
 	BCD						CON0(
-		.bin		(second),
-		.hundreds(),
-		.tens		(sec_10),
-		.ones		(sec1));
+		.bin			(second),
+		.hundreds	(),
+		.tens			(sec_10),
+		.ones			(sec1));
 		
 	BCD						CON1(
-		.bin		(minute),
-		.hundreds(),
-		.tens		(min_10),
-		.ones		(min1));
+		.bin			(minute),
+		.hundreds	(),
+		.tens			(min_10),
+		.ones			(min1));
 		
 	BCD						CON2(
-		.bin		(hour),
-		.hundreds(),
-		.tens		(hour_10),
-		.ones		(hour1));
+		.bin			(hour),
+		.hundreds	(),
+		.tens			(hour_10),
+		.ones			(hour1));
 		
 	en_clk_lcd				LCLK( 
-			.clk(clk), 
-			.rst(rstn), 
-			.en_clk(en_clk) );
+			.clk		(clk), 
+			.rst		(rstn), 
+			.en_clk	(en_clk) );
 	
 	lcd_display_string	STR ( 
 			.clk		(clk), 

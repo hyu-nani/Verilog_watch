@@ -1,19 +1,23 @@
-module	lcd_display_string( clk, 
-									  rst,
-									  hour,
-									  minute,
-									  second,
-									  index, 
-									  out );
+module	lcd_display_string( 
+	clk, 
+	rst, 
+	index, 
+	sec_10,
+	sec1,
+	min_10,
+	min1,
+	hour_10,
+	hour1,
+	out);
 	
 	input				clk;
 	input				rst;
-	input		[5:0]	hour,minute,second;
 	input		[4:0] index;
+	input		[3:0]	hour_10,hour1,min_10,min1,sec_10,sec1;
 	output	[7:0] out;
 	
-	reg	[4:0] index;
-	reg	[7:0] out;
+	wire		[4:0] index;
+	reg		[7:0] out;
 	
 	always @ ( posedge clk or negedge rst )
 		if(!rst)
