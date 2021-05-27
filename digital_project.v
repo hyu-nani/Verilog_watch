@@ -35,18 +35,24 @@ module	digital_project (
 		.hour				(hour));
 		
 	BCD							CON0(
+		.clk				(clk),
+		.rst				(rstn),
 		.bin				(second),
 		.hundreds		(),
 		.tens				(tensS),
 		.ones				(onesS));
 			
 	BCD							CON1(
+		.clk				(clk),
+		.rst				(rstn),
 		.bin				(minute),
 		.hundreds		(),
 		.tens				(tensM),
 		.ones				(onesM));
 		
 	BCD							CON2(
+		.clk				(clk),
+		.rst				(rstn),
 		.bin				(hour),
 		.hundreds		(),
 		.tens				(tensH),
