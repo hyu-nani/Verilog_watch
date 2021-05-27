@@ -1,5 +1,5 @@
 Flow report for digital_project
-Fri May 28 01:11:50 2021
+Fri May 28 01:21:57 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri May 28 01:11:50 2021       ;
+; Flow Status                        ; Successful - Fri May 28 01:21:57 2021       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; digital_project                             ;
 ; Top-level Entity Name              ; digital_project                             ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/28/2021 01:11:27 ;
+; Start date & time ; 05/28/2021 01:21:34 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; digital_project     ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 174508023526339.162213188702992        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 174508023526339.162213249306472        ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
@@ -95,9 +95,9 @@ refer to the applicable agreement for further details.
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 4761 MB             ; 00:00:23                           ;
-; Fitter               ; 00:00:05     ; 1.0                     ; 5480 MB             ; 00:00:06                           ;
+; Fitter               ; 00:00:05     ; 1.0                     ; 5477 MB             ; 00:00:06                           ;
 ; Assembler            ; 00:00:01     ; 1.0                     ; 4666 MB             ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4748 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4745 MB             ; 00:00:02                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4637 MB             ; 00:00:01                           ;
 ; Total                ; 00:00:20     ; --                      ; --                  ; 00:00:33                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+

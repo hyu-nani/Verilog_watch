@@ -16,7 +16,6 @@ module	lcd_display_string(
 	input		[3:0]	ones1, tens1, ones2, tens2, ones3, tens3;
 	output	[7:0] out;
 	
-	wire		[3:0]	ones1, tens1, ones2, tens2, ones3, tens3;
 	wire		[4:0] index;
 	reg		[7:0] out;
 	
