@@ -19,52 +19,52 @@ module	digital_project (
 	
 	assign			rstn	= ~rst;
 	
-	clock						TIME(
-		.clk			(clk), 
-		.rst			(rst),
-		.year			(year),
-		.month		(month),
-		.day			(day),
-		.second		(second),
-		.minute		(minute),
-		.hour			(hour));
+	clock							TIME(
+		.clk				(clk), 
+		.rst				(rst),
+		.year				(year),
+		.month			(month),
+		.day				(day),
+		.second			(second),
+		.minute			(minute),
+		.hour				(hour));
 	
-	BCD						CON0(
-		.bin			(second),
-		.hundreds	(),
-		.tens			(sec_10),
-		.ones			(sec1));
+	BCD							CON0(
+		.bin				(second),
+		.hundreds		(),
+		.tens				(sec_10),
+		.ones				(sec1));
+			
+	BCD							CON1(
+		.bin				(minute),
+		.hundreds		(),
+		.tens				(min_10),
+		.ones				(min1));
 		
-	BCD						CON1(
-		.bin			(minute),
-		.hundreds	(),
-		.tens			(min_10),
-		.ones			(min1));
+	BCD							CON2(
+		.bin				(hour),
+		.hundreds		(),
+		.tens				(hour_10),
+		.ones				(hour1));
 		
-	BCD						CON2(
-		.bin			(hour),
-		.hundreds	(),
-		.tens			(hour_10),
-		.ones			(hour1));
-		
-	en_clk_lcd				LCLK( 
-			.clk		(clk), 
-			.rst		(rstn), 
-			.en_clk	(en_clk) );
+	en_clk_lcd					LCLK( 
+			.clk			(clk), 
+			.rst			(rstn), 
+			.en_clk		(en_clk) );
 	
-	lcd_display_string	STR ( 
-			.clk		(clk), 
-			.rst		(rstn), 
-			.index	(index_char), 
-			.sec_10	(sec_10),
-			.sec1		(sec1),
-			.min_10	(min_10),
-			.min1		(min1),
-			.hour_10	(hour_10),
-			.hour1	(hour1),
-			.out		(data_char) );
+	lcd_display_string		STR ( 
+			.clk			(clk), 
+			.rst			(rstn), 
+			.index		(index_char), 
+			.sec_10		(sec_10),
+			.sec1			(sec1),
+			.min_10		(min_10),
+			.min1			(min1),
+			.hour_10		(hour_10),
+			.hour1		(hour1),
+			.out			(data_char) );
 	
-	lcd_driver				DRV ( 
+	lcd_driver					DRV ( 
 			.clk			(clk), 
 			.rst			(rstn), 
 			.en_clk		(en_clk), 
