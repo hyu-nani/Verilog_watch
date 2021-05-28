@@ -33,7 +33,6 @@ module	digital_project (
 		.clk				(clk),
 		.rst				(rstn),
 		.bin				(second),
-		.hundreds		(),
 		.tens				(tensS),
 		.ones				(onesS));
 			
@@ -41,7 +40,6 @@ module	digital_project (
 		.clk				(clk),
 		.rst				(rstn),
 		.bin				(minute),
-		.hundreds		(),
 		.tens				(tensM),
 		.ones				(onesM));
 		
@@ -49,7 +47,6 @@ module	digital_project (
 		.clk				(clk),
 		.rst				(rstn),
 		.bin				(hour),
-		.hundreds		(),
 		.tens				(tensH),
 		.ones				(onesH));
 		
