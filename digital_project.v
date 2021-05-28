@@ -19,11 +19,6 @@ module	digital_project (
 	
 	assign			rstn	= ~rst;
 	
-	clkone_gen					U0(
-		.clk				(clk),
-		.rst				(rst),
-		.clk1				(clk1));
-	
 	clock							TIME(
 		.clk				(clk), 
 		.rst				(rstn),
