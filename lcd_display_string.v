@@ -43,6 +43,9 @@ module	lcd_display_string(
 				15 : out	<=	8'h20;
 				
 				// line2
+				16 : out <= 8'h30 + tens3;
+				17 : out <= 8'h30 + ones3;
+				/*
 				16 : case (tens3)
 							0 : out	<=	8'h30;
 							1 : out	<= 8'h31;
@@ -62,7 +65,11 @@ module	lcd_display_string(
 							9 : out	<= 8'h39;
 							default : out <= 8'h20;
 					  endcase
+				*/
 				18 : out	<=	8'h3A;
+				19 : out <= 8'h30 + tens2;
+				20 : out <= 8'h30 + ones2;
+				/*
 				19 : case (tens2)
 							0 : out	<=	8'h30;
 							1 : out	<= 8'h31;
@@ -85,7 +92,11 @@ module	lcd_display_string(
 							9 : out	<= 8'h39;
 							default : out <= 8'h20;
 					  endcase
+				*/
 				21 : out	<=	8'h3A;
+				22 : out <= 8'h30 + tens1;
+				23 : out <= 8'h30 + ones1;
+				/*
 				22 : case (tens1)
 							0 : out	<=	8'h30;
 							1 : out	<= 8'h31;
@@ -108,6 +119,7 @@ module	lcd_display_string(
 							9 : out	<= 8'h39;
 							default : out <= 8'h20;
 					  endcase
+				*/
 				24 : out	<=	8'h20;
 				25 : out	<=	8'h20;
 				26 : out	<=	8'h20;
