@@ -59,12 +59,12 @@ module	digital_project (
 			.clk			(clk), 
 			.rst			(rstn), 
 			.index		(index_char), 
-			.ones1		(onesS),
-			.tens1		(tensS),
-			.ones2		(onesM),
-			.tens2		(tensM),
-			.ones3		(onesH),
-			.tens3		(tensH),
+			.ones1		(4'd3),
+			.tens1		(4'd4),
+			.ones2		(4'd3),
+			.tens2		(4'd5),
+			.ones3		(4'd1),
+			.tens3		(4'd1),
 			.out			(data_char) );
 	
 	lcd_driver					DRV ( 
