@@ -29,7 +29,7 @@
 (DELAYFILE
   (SDFVERSION "2.1")
   (DESIGN "digital_project")
-  (DATE "05/28/2021 01:21:57")
+  (DATE "05/28/2021 14:43:53")
   (VENDOR "Altera")
   (PROGRAM "Quartus Prime")
   (VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition")
@@ -2692,7 +2692,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE STR\|Mux23\~0)
+    (INSTANCE STR\|Mux0\~0)
     (DELAY
       (ABSOLUTE
         (PORT datac (318:318:318) (412:412:412))
@@ -4460,7 +4460,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE STR\|Mux27\~1)
+    (INSTANCE STR\|Mux4\~1)
     (DELAY
       (ABSOLUTE
         (PORT dataa (860:860:860) (844:844:844))
@@ -4911,7 +4911,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE STR\|Mux27\~0)
+    (INSTANCE STR\|Mux4\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (863:863:863) (852:852:852))
@@ -4927,7 +4927,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE STR\|Mux27\~2)
+    (INSTANCE STR\|Mux4\~2)
     (DELAY
       (ABSOLUTE
         (PORT dataa (282:282:282) (315:315:315))
@@ -4991,7 +4991,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE STR\|Mux26\~0)
+    (INSTANCE STR\|Mux3\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (574:574:574) (602:602:602))
@@ -5007,7 +5007,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE STR\|Mux26\~1)
+    (INSTANCE STR\|Mux3\~1)
     (DELAY
       (ABSOLUTE
         (PORT datac (966:966:966) (966:966:966))
@@ -5019,7 +5019,7 @@
   )
   (CELL
     (CELLTYPE "dffeas")
-    (INSTANCE STR\|out\[3\])
+    (INSTANCE STR\|out\[1\])
     (DELAY
       (ABSOLUTE
         (PORT clk (1598:1598:1598) (1634:1634:1634))

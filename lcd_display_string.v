@@ -47,7 +47,7 @@ module	lcd_display_string(
 							0 : out	<=	8'h30;
 							1 : out	<= 8'h31;
 							2 : out	<= 8'h32;
-						default : out <= 8'h20;
+							default : out <= 8'h20;
 					  endcase
 				17 : case (ones3)
 							0 : out	<=	8'h30;
@@ -70,7 +70,7 @@ module	lcd_display_string(
 							3 : out	<= 8'h33;
 							4 : out	<= 8'h34;
 							5 : out	<= 8'h35;
-						default : out <= 8'h20;
+							default : out <= 8'h20;
 					  endcase
 				20 : case (ones2)
 							0 : out	<=	8'h30;

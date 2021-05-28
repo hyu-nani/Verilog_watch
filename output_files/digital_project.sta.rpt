@@ -1,5 +1,5 @@
 Timing Analyzer report for digital_project
-Fri May 28 01:21:55 2021
+Fri May 28 14:43:48 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -109,7 +109,8 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.6%      ;
+;     Processor 2            ;   0.8%      ;
+;     Processors 3-4         ;   0.8%      ;
 +----------------------------+-------------+
 
 
@@ -482,7 +483,7 @@ No paths to report.
 ; 0.806 ; lcd_driver:DRV|cnt_init[5]            ; lcd_driver:DRV|cnt_init[8]            ; clk                           ; clk         ; 0.000        ; 0.531      ; 1.549      ;
 ; 0.810 ; lcd_driver:DRV|state.PRINT_STRING     ; lcd_driver:DRV|state.LINE2            ; clk                           ; clk         ; 0.000        ; 0.080      ; 1.102      ;
 ; 0.812 ; lcd_driver:DRV|state.PRINT_STRING     ; lcd_driver:DRV|state.RETURN_HOME      ; clk                           ; clk         ; 0.000        ; 0.080      ; 1.104      ;
-; 0.813 ; lcd_display_string:STR|out[3]         ; lcd_driver:DRV|data_bus[1]            ; clk                           ; clk         ; 0.000        ; 0.080      ; 1.105      ;
+; 0.813 ; lcd_display_string:STR|out[1]         ; lcd_driver:DRV|data_bus[1]            ; clk                           ; clk         ; 0.000        ; 0.080      ; 1.105      ;
 ; 0.825 ; lcd_driver:DRV|cnt_init[4]            ; lcd_driver:DRV|cnt_init[8]            ; clk                           ; clk         ; 0.000        ; 0.531      ; 1.568      ;
 ; 0.834 ; lcd_driver:DRV|state.DISP_OFF         ; lcd_driver:DRV|data_bus[3]            ; clk                           ; clk         ; 0.000        ; 0.080      ; 1.126      ;
 ; 0.836 ; lcd_driver:DRV|state.RETURN_HOME      ; lcd_driver:DRV|state.PRINT_STRING     ; clk                           ; clk         ; 0.000        ; 0.080      ; 1.128      ;
@@ -973,7 +974,7 @@ No paths to report.
 ; 0.744 ; lcd_driver:DRV|index_char[0]          ; lcd_driver:DRV|index_char[0]          ; clk                           ; clk         ; 0.000        ; 0.072      ; 1.011      ;
 ; 0.744 ; lcd_driver:DRV|state.DISP_OFF         ; lcd_driver:DRV|data_bus[3]            ; clk                           ; clk         ; 0.000        ; 0.072      ; 1.011      ;
 ; 0.751 ; lcd_driver:DRV|cnt_init[4]            ; lcd_driver:DRV|cnt_init[8]            ; clk                           ; clk         ; 0.000        ; 0.488      ; 1.434      ;
-; 0.753 ; lcd_display_string:STR|out[3]         ; lcd_driver:DRV|data_bus[1]            ; clk                           ; clk         ; 0.000        ; 0.072      ; 1.020      ;
+; 0.753 ; lcd_display_string:STR|out[1]         ; lcd_driver:DRV|data_bus[1]            ; clk                           ; clk         ; 0.000        ; 0.072      ; 1.020      ;
 ; 0.756 ; lcd_driver:DRV|state.PRINT_STRING     ; lcd_driver:DRV|state.LINE2            ; clk                           ; clk         ; 0.000        ; 0.072      ; 1.023      ;
 ; 0.759 ; lcd_driver:DRV|state.PRINT_STRING     ; lcd_driver:DRV|state.RETURN_HOME      ; clk                           ; clk         ; 0.000        ; 0.072      ; 1.026      ;
 ; 0.759 ; lcd_driver:DRV|cnt_init[18]           ; lcd_driver:DRV|cnt_init[19]           ; clk                           ; clk         ; 0.000        ; 0.496      ; 1.450      ;
@@ -1559,7 +1560,7 @@ No paths to report.
 ; 0.322 ; lcd_driver:DRV|index_char[0]          ; lcd_driver:DRV|index_char[0]          ; clk                           ; clk         ; 0.000        ; 0.036      ; 0.442      ;
 ; 0.322 ; en_clk_lcd:LCLK|cnt_en[0]             ; en_clk_lcd:LCLK|cnt_en[0]             ; clk                           ; clk         ; 0.000        ; 0.036      ; 0.442      ;
 ; 0.328 ; lcd_driver:DRV|state.MODE_SET         ; lcd_driver:DRV|state.PRINT_STRING     ; clk                           ; clk         ; 0.000        ; 0.036      ; 0.448      ;
-; 0.328 ; lcd_display_string:STR|out[3]         ; lcd_driver:DRV|data_bus[1]            ; clk                           ; clk         ; 0.000        ; 0.036      ; 0.448      ;
+; 0.328 ; lcd_display_string:STR|out[1]         ; lcd_driver:DRV|data_bus[1]            ; clk                           ; clk         ; 0.000        ; 0.036      ; 0.448      ;
 ; 0.335 ; lcd_driver:DRV|state.PRINT_STRING     ; lcd_driver:DRV|state.LINE2            ; clk                           ; clk         ; 0.000        ; 0.036      ; 0.455      ;
 ; 0.335 ; lcd_driver:DRV|state.PRINT_STRING     ; lcd_driver:DRV|state.RETURN_HOME      ; clk                           ; clk         ; 0.000        ; 0.036      ; 0.455      ;
 ; 0.336 ; lcd_driver:DRV|cnt_init[17]           ; lcd_driver:DRV|cnt_init[19]           ; clk                           ; clk         ; 0.000        ; 0.222      ; 0.642      ;
@@ -1822,7 +1823,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri May 28 01:21:53 2021
+    Info: Processing started: Fri May 28 14:43:42 2021
 Info: Command: quartus_sta digital_project -c digital_project
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1904,9 +1905,9 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4745 megabytes
-    Info: Processing ended: Fri May 28 01:21:55 2021
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Peak virtual memory: 4748 megabytes
+    Info: Processing ended: Fri May 28 14:43:48 2021
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:06
 
 
